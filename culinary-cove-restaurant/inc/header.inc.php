@@ -12,9 +12,9 @@
     <h1>Culinary Cove</h1>
     <p>Your sanctuary for exceptional flavours</p>
     <nav>
-      <a href="/culinary-cove-restaurant/">Our mission</a>
-      <a href="/culinary-cove-restaurant/ingredients.php">Ingredients</a>
-      <a href="/culinary-cove-restaurant/menu.php">Menu</a>
+      <a href="./">Our mission</a>
+      <a href="./ingredients.php">Ingredients</a>
+      <a href="./menu.php">Menu</a>
     </nav>
   </header>
 

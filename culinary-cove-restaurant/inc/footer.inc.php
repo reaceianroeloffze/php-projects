@@ -1,7 +1,7 @@
 </main>
 
 <footer>
-  <p>Culinary Cove's website.</p>
+    <p>Culinary Cove's website.</p>
 </footer>
 </body>
 </html>

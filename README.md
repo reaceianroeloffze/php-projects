@@ -10,6 +10,6 @@ In this repository, I will store all the projects I build using PHP.
 
 ## Projects
 
-### [Culinary Cove Restaurant Site](https://github.com/reaceianroeloffze/php-projects/tree/Root/culinary-cove-restaurant)
+### [Culinary Cove Restaurant Site](https://github.com/reaceianroeloffze/php-projects/tree/Root/culinary-cove-restaurant-site)
 
 A simple brochure/static website built dynamically using PHP basics, including variables, `include()`, `if/else`, `empty()`, and `isset()`.

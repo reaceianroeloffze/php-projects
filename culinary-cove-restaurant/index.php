@@ -10,7 +10,7 @@ include 'inc/header.inc.php';
     <h1>Our mission</h1>
     <p>
       At Culinary Cove, our core mission is to offer a sanctuary for 
-      those who seek exceptional flavors and culinary experiences. 
+      those who seek exceptional flavours and culinary experiences.
       We pride ourselves on sourcing only the finest ingredients, 
       carefully crafting dishes that bridge the gap between traditional
       and modern cooking techniques. Our culinary team is driven by a
@@ -32,6 +32,6 @@ include 'inc/header.inc.php';
       of our operation, from the food to the service to the overall
       dining experience. At Culinary Cove, every meal is more than
       just a dish; it's a journey into a world of unique and exciting
-      flavors.
+      flavours.
     </p>
 <?php include 'inc/footer.inc.php'; ?>

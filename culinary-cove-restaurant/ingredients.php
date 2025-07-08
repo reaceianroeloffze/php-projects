@@ -10,13 +10,13 @@ include 'inc/header.inc.php';
     <p>
       At Culinary Cove, our ethos is deeply rooted in the belief that
       exceptional cuisine starts with exceptional ingredients. That's
-      why we are committed to using only natural, locally-sourced
+      why we are committed to using only natural, locally sourced
       produce, free-range meats, and sustainably caught seafood.
       Our culinary team works closely with local farmers and artisans
       to ensure that the ingredients we use are not only fresh but
       also ethically and sustainably produced. This unwavering
-      commitment to quality is evident in the vibrant flavors and
-      wholesome nutrition that characterize each dish on our menu.
+      commitment to quality is noticeable in the vibrant flavours and
+      wholesome nutrition that characterise each dish on our menu.
     </p>
     <figure style="text-align: center;">
       <img style="max-width: 20rem;" 
@@ -30,7 +30,7 @@ include 'inc/header.inc.php';
       as an opportunity to celebrate the bounty of nature, offering a
       culinary experience that is both delicious and nourishing.
       Every herb, spice, and vegetable is chosen with care,
-      accentuating the natural flavors and textures of our dishes.
+      emphasising the natural flavours and textures of our dishes.
       It is this focus on natural, high-quality ingredients that
       transforms dining at Culinary Cove into more than just a
       meal—it becomes a journey into a world of pure, unadulterated

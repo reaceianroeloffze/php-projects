@@ -19,7 +19,7 @@ include 'inc/header.inc.php';
     </p>
     <figure style="text-align: center;">
       <img style="max-width: 20rem;" 
-           src="images/pexels-burak-the-weekender-735869.jpg" 
+           src="images/pexels-burak-the-weekender-735869.jpg"
            alt="Our amazing restaurant" />
       <figcaption>Our amazing restaurant</figcaption>
     </figure>

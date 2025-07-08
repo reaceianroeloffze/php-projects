@@ -15,10 +15,12 @@
     <h1>Culinary Cove</h1>
     <p>Your sanctuary for exceptional flavours</p>
     <nav>
+        <!-- Create the $pageKey variable if it doesn't exist -->
+        <?php if (!isset($pageKey)) $pageKey = ''; ?>
         <!-- Add active class when on a specific page to highlight that page's link when on that page -->
-        <a href="./" <?php if (!empty($pageKey) && $pageKey === 'mission'): ?> class="active" <?php endif; ?> >Our mission</a>
-        <a href="./ingredients.php" <?php if (!empty($pageKey) && $pageKey === 'ingredients'): ?> class="active" <?php endif; ?> >Ingredients</a>
-        <a href="./menu.php" <?php if (!empty($pageKey) && $pageKey === 'menu'): ?> class="active" <?php endif; ?> >Menu</a>
+        <a href="./" <?php if ($pageKey === 'mission'): ?> class="active" <?php endif; ?> >Our mission</a>
+        <a href="./ingredients.php" <?php if ($pageKey === 'ingredients'): ?> class="active" <?php endif; ?> >Ingredients</a>
+        <a href="./menu.php" <?php if ($pageKey === 'menu'): ?> class="active" <?php endif; ?> >Menu</a>
     </nav>
 </header>
 

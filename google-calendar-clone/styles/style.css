@@ -180,7 +180,7 @@ body {
 .modal {
     position: fixed;
     inset: 0;
-    /*display: none;*/
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -193,7 +193,7 @@ body {
 }
 
 .modal__modal-content {
-    /*display: none;*/
+    display: none;
     background-color: white;
     padding: 2rem;
     border-radius: 10px;

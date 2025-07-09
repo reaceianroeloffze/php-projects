@@ -25,7 +25,7 @@
 <div class="calendar">
     <div class="arrow-btn-container">
         <button class="calendar__previous-month btn">&#10096;</button>
-        <h2 class="month-and-year" id="month-year">May 2025</h2>
+        <h2 class="month-and-year" id="month-year"></h2>
         <button class="calendar__next-month btn">&#10097;</button>
     </div>
     <div class="calendar-grid" id="calendar"></div>

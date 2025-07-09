@@ -1,12 +1,14 @@
-root {
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lunasima:wght@400;700&display=swap');
+
+:root {
     --primary-colour: #3B82F6;
     --primary-colour-light: #DBEAFE;
     --primary-colour-dark: #1E3A8A;
-    --background-colour: #B2B2B2;
-    --success-msg: #D1FAE5 !important;
-    --success-msg-text: #065F46 !important;
-    --error-msg: #FEE2E2 !important;
-    --error-msg-text: #B91C1C !important;
+    --background-colour: #9197A1;
+    --success-msg: #D1FAE5;
+    --success-msg-text: #065F46;
+    --error-msg: #FEE2E2;
+    --error-msg-text: #B91C1C;
 }
 
 * {
@@ -15,26 +17,91 @@ root {
     padding: 0;
 }
 
+body {
+    font-family: 'Lunasima', sans-serif;
+    font-weight: 700;
+    background-color: var(--background-colour);
+    line-height: 1.6;
+    color: #333;
+}
+
+.header {
+    background-color: var(--primary-colour);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Clock */
+.clock-container {
+    background-color: var(--primary-colour-light);
+    color: var(--primary-colour-dark);
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'inconsolata', monospace;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--primary-colour);
+}
+
+@media screen and (max-width: 768px) {
+    .clock-container {
+        font-size: 1.4rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Calendar Container */
+.calendar {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6);
+}
+
 .btn {
     border: none;
     outline: none;
     display: block;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .arrow-btn-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* next & prev month btn styles */
 .calendar__previous-month,
 .calendar__next-month {
-    background: linear-gradient(180deg, #FFF, #000);
-    padding: 5px 10px;
+    background: linear-gradient(180deg, var(--primary-colour-light), var(--primary-colour));
+    padding: 10px;
+    width: 5%;
+    font-size: 1.5rem;
+}
+
+.calendar__previous-month:active,
+.calendar__next-month:active {
+    background: linear-gradient(180deg, var(--primary-colour), var(--primary-colour-light));
+}
+
+.form-label, .event__siteLabel {
+    font-size: 1.2rem;
 }
 
 .form-input, .event-selection {
     width: 100%;
+    font-size: 1.2rem;
+    padding: .8rem .1rem;
+    border-radius: .3rem;
+    border: none;
+    outline: none;
 }
 
 .required-ast {

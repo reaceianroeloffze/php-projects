@@ -1,3 +1,14 @@
+root {
+    --primary-colour: #3B82F6;
+    --primary-colour-light: #DBEAFE;
+    --primary-colour-dark: #1E3A8A;
+    --background-colour: #B2B2B2;
+    --success-msg: #D1FAE5 !important;
+    --success-msg-text: #065F46 !important;
+    --error-msg: #FEE2E2 !important;
+    --error-msg-text: #B91C1C !important;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

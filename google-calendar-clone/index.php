@@ -29,6 +29,16 @@
         <button class="calendar__next-month btn">&#10097;</button>
     </div>
     <div class="calendar-grid" id="calendar"></div>
+
+    <!-- Modal for add/edit/delete apt -->
+    <div id="event-selection-wrapper" class="event">
+        <label class="event__site-label">
+            <strong>Select Event:</strong>
+            <select id="events-selection" class="event-selection">
+                <option class="event-selection__event" disabled selected>Select Event &#8595;</option>
+            </select>
+        </label>
+    </div>
 </div>
 </body>
 </html>

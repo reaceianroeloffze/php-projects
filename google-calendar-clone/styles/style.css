@@ -7,7 +7,7 @@
 .btn {
     border: none;
     outline: none;
-
+    display: block;
 }
 
 .arrow-btn-container {

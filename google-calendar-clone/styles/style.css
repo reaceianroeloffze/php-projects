@@ -37,7 +37,7 @@ body {
     outline: none;
     display: block;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -68,7 +68,7 @@ body {
     padding: 1.5rem;
     background-color: white;
     border-radius: .5rem;
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
 }
 
 .arrow-btn-container {
@@ -138,7 +138,7 @@ body {
 
 .day__today {
     background-color: var(--primary-colour-light);
-    border-color:  var(--primary-colour-dark);
+    border-color: var(--primary-colour-dark);
 }
 
 .date-number {
@@ -146,8 +146,8 @@ body {
     margin-bottom: 5px;
 }
 
-.event {
-    background-color:  var(--primary-colour-dark);
+.appointment {
+    background-color: var(--primary-colour-dark);
     color: white;
     padding: 3px 6px;
     border-radius: 4px;
@@ -155,6 +155,10 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: transform .2s ease;
+}
+
+.appointment:hover {
+    transform: scale(1.03);
 }
 
 /* Alert boxes */
@@ -173,28 +177,74 @@ body {
     color: var(--success-msg-text);
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    /*display: none;*/
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
 .error-msg {
     background-color: var(--error-msg);
     color: var(--error-msg-text);
 }
 
-.event:hover {
-    transform: scale(1.03);
+.modal__modal-content {
+    /*display: none;*/
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Form */
+
+.event-selection__event {
+    font-size: 1rem;
 }
 
 .form-label, .event__siteLabel {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 6px;
+}
+
+.event__siteLabel {
+    margin-top: 0;
 }
 
 .form-input, .event-selection {
     width: 100%;
-    font-size: 1.2rem;
-    padding: .8rem .1rem;
+    font-size: 1rem;
+    padding: .8rem .5rem;
     border-radius: .3rem;
-    border: none;
+    border: 1px solid #333;
     outline: none;
 }
 
+.submit-btn {
+    margin-top: 1rem;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: var(--primary-colour);
+}
+
+.delete-btn {
+    background-color: crimson;
+}
+
+.cancel-btn {
+    background-color: #E5E7EB;
+    color: #333;
+}
+
 .required-ast {
-    color: red;
+    color: var(--error-msg-text);
 }

@@ -41,7 +41,7 @@
         <div id="event-selection-wrapper" class="event">
             <label class="event__siteLabel">
                 <strong>Select Event:</strong>
-                <select id="events-election" class="event-selection">
+                <select id="events-selection" class="event-selection">
                     <option class="event-selection__event" disabled selected>Select Event &#8595;</option>
                 </select>
             </label>
@@ -76,7 +76,7 @@
         <form method="POST" class="site-form delete-form">
             <input type="hidden" name="action" value="delete">
             <input type="hidden" name="event_id" value="delete" id="deleteEventId">
-            <button class="submit-btn btn">&#128465; Delete Appointment</button>
+            <button class="submit-btn delete-btn btn">&#128465; Delete Appointment</button>
         </form>
 
         <!-- ❌ Cancel -->

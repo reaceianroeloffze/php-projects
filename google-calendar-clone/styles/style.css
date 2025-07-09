@@ -160,7 +160,22 @@ body {
 /* Alert boxes */
 
 .alert {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
 
+.success-msg {
+    background-color: var(--success-msg);
+    color: var(--success-msg-text);
+}
+
+.error-msg {
+    background-color: var(--error-msg);
+    color: var(--error-msg-text);
 }
 
 .event:hover {

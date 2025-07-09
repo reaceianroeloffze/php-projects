@@ -236,8 +236,18 @@ body {
     background-color: var(--primary-colour);
 }
 
+.submit-btn:hover {
+    background: #3BAFF6;
+    transition: background .2s ease;
+}
+
 .delete-btn {
     background-color: crimson;
+}
+
+.delete-btn:hover {
+    background: #B11C1C;
+    transition: background .2s ease;
 }
 
 .cancel-btn {
@@ -245,6 +255,41 @@ body {
     color: #333;
 }
 
+.cancel-btn:hover {
+   background-color: #D5D7DB;
+}
+
 .required-ast {
     color: var(--error-msg-text);
+}
+
+/* Day Overlay Styling */
+
+.day-overlay {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 2;
+}
+
+.day:hover .day-overlay {
+    display: flex;
+}
+
+.overlay-btn {
+    background: var(--primary-colour-dark);
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background .2s ease;
+}
+
+.overlay-btn:hover {
+    background: var(--primary-colour);
 }

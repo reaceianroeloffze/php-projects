@@ -30,16 +30,48 @@
     </div>
     <div class="calendar-grid" id="calendar"></div>
 
-    <!-- Modal for add/edit/delete apt -->
-    <div id="event-selection-wrapper" class="event">
-        <label class="event__site-label">
-            <strong>Select Event:</strong>
-            <select id="events-selection" class="event-selection">
-                <option class="event-selection__event" disabled selected>Select Event &#8595;</option>
-            </select>
-        </label>
-    </div>
 </div>
+
+<!-- Modal for add/edit/delete apt -->
+<div id="event-selection-wrapper" class="event">
+    <label class="event__siteLabel">
+        <strong>Select Event:</strong>
+        <select id="events-election" class="event-selection">
+            <option class="event-selection__event" disabled selected>Select Event &#8595;</option>
+        </select>
+    </label>
+</div>
+
+<!-- Main form -->
+<form action="" class="site-form" id="event-form" method="POST">
+
+    <!-- Course input -->
+    <label class="form-label course-title">Course Title:<span class="required-ast">&#42;</span>
+        <input class="form-input" type="text" name="course_name" required>
+    </label>
+
+    <!-- Instructor input -->
+    <label class="form-label instructor-name">Instructor Name:<span class="required-ast">&#42;</span>
+        <input class="form-input" type="text" name="instructor_name" required>
+    </label>
+
+    <!-- Start Date -->
+    <label class="form-label start-date">Start Date:<span class="required-ast">&#42;</span>
+        <input class="form-input" type="date" name="start_date" required>
+    </label>
+
+    <!-- End Date -->
+    <label class="form-label start-date">End Date:<span class="required-ast">&#42;</span>
+        <input class="form-input" type="date" name="end_date" required>
+    </label>
+
+    <button class="submit-btn btn" type="submit">Set Appointment</button>
+
+    <!-- hidden input -->
+    <input type="hidden" name="action" value="add" id="form-action">
+    <input type="hidden" name="event_id" id="event-id">
+</form>
+
 </body>
 </html>
 

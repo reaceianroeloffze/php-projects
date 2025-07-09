@@ -14,12 +14,22 @@
 <body>
 <header class="header">
     <h1 class="page-title">📅 Course Calendar <br> Google Calendar Clone Project</h1>
-
-    <!-- Clock -->
-    <div class="clock-container">
-        <div class="clock-container__clock"></div>
-    </div>
 </header>
+
+<!-- Clock -->
+<div class="clock-container">
+    <div class="clock-container__clock" id="clock"></div>
+</div>
+
+<!-- Calendar -->
+<div class="calendar">
+    <div class="arrow-btn-container">
+        <button class="calendar__previous-month btn">&#10096;</button>
+        <h2 class="month-and-year" id="month-year">May 2025</h2>
+        <button class="calendar__next-month btn">&#10097;</button>
+    </div>
+    <div class="calendar-grid" id="calendar"></div>
+</div>
 </body>
 </html>
 

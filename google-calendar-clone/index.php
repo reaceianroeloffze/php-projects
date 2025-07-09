@@ -13,7 +13,7 @@
 </head>
 <body>
 <header class="header">
-    <h1 class="page-title">📅 Course Calendar <br> Google Calendar Clone Project</h1>
+    <h1 class="page-title">&#128197; Course Calendar <br> Google Calendar Clone Project</h1>
 </header>
 
 <!-- Clock -->
@@ -66,7 +66,7 @@
                 <input class="form-input" type="date" name="end_date" required>
             </label>
             <!-- Submit button -->
-            <button class="submit-btn btn" type="submit">Set Appointment</button>
+            <button class="submit-btn btn" type="submit"> &#9989; Set Appointment</button>
             <!-- hidden input -->
             <input type="hidden" name="action" value="add" id="form-action">
             <input type="hidden" name="event_id" id="eventId">
@@ -76,11 +76,11 @@
         <form method="POST" class="site-form delete-form">
             <input type="hidden" name="action" value="delete">
             <input type="hidden" name="event_id" value="delete" id="deleteEventId">
-            <button class="submit-btn btn">Delete Appointment</button>
+            <button class="submit-btn btn">&#128465; Delete Appointment</button>
         </form>
 
         <!-- ❌ Cancel -->
-        <button class="cancel-btn submit-btn btn" type="button">Cancel</button>
+        <button class="cancel-btn submit-btn btn" type="button">&#10060; Cancel</button>
     </div>
 </div>
 </body>

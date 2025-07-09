@@ -32,6 +32,15 @@ body {
     text-align: center;
 }
 
+.btn {
+    border: none;
+    outline: none;
+    display: block;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Clock */
 .clock-container {
     background-color: var(--primary-colour-light);
@@ -62,22 +71,13 @@ body {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.6);
 }
 
-.btn {
-    border: none;
-    outline: none;
-    display: block;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .arrow-btn-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
-/* next & prev month btn styles */
 .calendar__previous-month,
 .calendar__next-month {
     background: linear-gradient(180deg, var(--primary-colour-light), var(--primary-colour));
@@ -89,6 +89,82 @@ body {
 .calendar__previous-month:active,
 .calendar__next-month:active {
     background: linear-gradient(180deg, var(--primary-colour), var(--primary-colour-light));
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+/* Mobile grid view */
+@media screen and (max-width: 1024px) {
+    .calendar-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+    }
+
+    .day, .day-name {
+        min-width: 140px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+}
+
+.day, .day-name {
+    text-align: center;
+}
+
+.day {
+    background-color: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    min-height: 100px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.day:hover {
+    background-color: #F3F4F6;
+}
+
+.day__today {
+    background-color: var(--primary-colour-light);
+    border-color:  var(--primary-colour-dark);
+}
+
+.date-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event {
+    background-color:  var(--primary-colour-dark);
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-top: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+/* Alert boxes */
+
+.alert {
+
+}
+
+.event:hover {
+    transform: scale(1.03);
 }
 
 .form-label, .event__siteLabel {

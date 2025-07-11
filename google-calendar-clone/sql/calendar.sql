@@ -20,3 +20,6 @@ CREATE TABLE IF NOT EXISTS `calendar`.`appointments`
     `created_at`      TIMESTAMP DEFAULT CURRENT_TIMESTAMP() NOT NULL,
     PRIMARY KEY (`course_id`)
 );
+
+# If mistakes are made, drop the database, make correction, and create everything again.
+# DROP DATABASE calendar

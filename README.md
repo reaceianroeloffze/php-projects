@@ -18,4 +18,4 @@ A simple brochure/static website built dynamically using PHP basics, including v
 
 ### [Google Calendar Clone](https://github.com/reaceianroeloffze/php-projects/tree/Root/google-calendar-clone)
 
-A full-stack web application built with HTML, CSS, JavaScript, PHP, and MySQL. No frameworks or libraries.
+A full-stack course appointment setting web application built with HTML, CSS, JavaScript, PHP, and MySQL. No frameworks or libraries.

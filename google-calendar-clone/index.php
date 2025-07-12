@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Reace Ian Roeloffze">
     <meta name="description" content="Google Calendar Clone Project">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Google Calendar Clone</title>
     <script src="/js/script.js" defer></script>
 </head>

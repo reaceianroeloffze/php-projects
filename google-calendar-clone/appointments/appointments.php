@@ -3,4 +3,5 @@
  * Controller for course calendar app
  * ================================== */
 
-include './library/connections.php';
+// include connection.php file to connect to the database
+include '../library/connections.php';

@@ -34,3 +34,15 @@ function updateAppointment($courseId, $courseName, $instructorName, $startDate, 
     return $rowsUpdated;
 }
 
+// Create a function to delete an appointment
+function deleteAppointment($courseId): int {
+    $db = connectToMySQL();
+    $sql = 'DELETE FROM appointments WHERE course_id = :id';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $stmt->bindValue(':id', $courseId, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsDeleted = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsDeleted;
+}

@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'add')
 
     if ($courseName && $instructorName && $startDate && $endDate) {
          $createdApt = createAppointment($courseName, $instructorName, $startDate, $endDate);
-         header('location: ' . $_SERVER['PHP_SELF'] . '?addSuccess=1');
+         header('location: ' . $_SERVER['PHP_SELF'] . '?success=1');
     } else {
-        header('location: ' . $_SERVER['PHP_SELF'] . '?addFailed=1');
+        header('location: ' . $_SERVER['PHP_SELF'] . '?error=1');
     }
     exit;
 }
@@ -39,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'edit'
 
     if ($courseId && $courseName && $instructorName && $startDate && $endDate) {
         $updatedApt = updateAppointment($courseId, $courseName, $instructorName, $startDate, $endDate);
-        header('location: ' . $_SERVER['PHP_SELF'] . '?updateSuccess=1');
+        header('location: ' . $_SERVER['PHP_SELF'] . '?success=2');
     } else {
-        header('location: ' . $_SERVER['PHP_SELF'] . '?updateFailed=1');
+        header('location: ' . $_SERVER['PHP_SELF'] . '?error=2');
     }
     exit;
 }
@@ -52,9 +52,27 @@ if ($_SERVER['REQUEST_METHOD' === 'POST' && ($_POST['action'] ?? '') === 'delete
 
     if ($courseId) {
         $deletedApt = deleteAppointment($courseId);
-        header('location: ' . $_SERVER['PHP_SELF'] . '?deleteSuccess=1');
+        header('location: ' . $_SERVER['PHP_SELF'] . '?success=3');
     } else {
-        header('location: ' . $_SERVER['PHP_SELF'] . '?deleteFailed=1');
+        header('location: ' . $_SERVER['PHP_SELF'] . '?error=3');
     }
     exit;
+}
+
+// Handle success and error messages
+if (isset($_GET['success'])) {
+    $successMsg = match ($_GET['success']) {
+        '1' => '✅ Appointment added successfully!',
+        '2' => '✅ Appointment updated successfully!',
+        '3' => '✅ Appointment deleted successfully!',
+        default => ''
+    };
+}
+if (isset($_GET['error'])) {
+    $errorMsg = match ($_GET['error']) {
+        '1' => '❌ Could not add appointment. Please try again.',
+        '2' => '❌ Could not update appointment. Please try again.',
+        '3' => '❌ Could not delete appointment. Please try again.',
+        default => ''
+    };
 }

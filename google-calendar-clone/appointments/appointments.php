@@ -45,3 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'edit'
     }
     exit;
 }
+
+// Handle deleting an appointment
+if ($_SERVER['REQUEST_METHOD' === 'POST' && ($_POST['action'] ?? '') === 'delete']) {
+    $courseId = $_POST['course_id'] ?? '';
+
+    if ($courseId) {
+        $deletedApt = deleteAppointment($courseId);
+        header('location: ' . $_SERVER['PHP_SELF'] . '?deleteSuccess=1');
+    } else {
+        header('location: ' . $_SERVER['PHP_SELF'] . '?deleteFailed=1');
+    }
+    exit;
+}

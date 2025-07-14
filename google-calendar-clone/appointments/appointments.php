@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'add')
     $endDate = $_POST['end_date'] ?? '';
 
     if ($courseName && $instructorName && $startDate && $endDate) {
-         $createdApt = createAppointment($courseName, $instructorName, $startDate, $endDate);
-         header('location: ' . $_SERVER['PHP_SELF'] . '?success=1');
+        $createdApt = createAppointment($courseName, $instructorName, $startDate, $endDate);
+        header('location: ' . $_SERVER['PHP_SELF'] . '?success=1');
     } else {
         header('location: ' . $_SERVER['PHP_SELF'] . '?error=1');
     }
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'edit'
 }
 
 // Handle deleting an appointment
-if ($_SERVER['REQUEST_METHOD' === 'POST' && ($_POST['action'] ?? '') === 'delete']) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delete') {
     $courseId = $_POST['course_id'] ?? '';
 
     if ($courseId) {
@@ -75,4 +75,24 @@ if (isset($_GET['error'])) {
         '3' => '❌ Could not delete appointment. Please try again.',
         default => ''
     };
+}
+
+// Fetch all data from the database
+$result = selectAllAppointments();
+
+if ($result && count($result) > 0) {
+    foreach ($result as $row) {
+        $startDate = new DateTime($row['start_date']);
+        $endDate = new DateTime($row['end_date']);
+        while ($startDate <= $endDate) {
+            $dbEvents[] = [
+                'id' => $row['course_id'],
+                'title' => "{$row['course_name']} - {$row['instructor_name']}",
+                'date' => $startDate->format('Y-m-d'),
+                'startDate' => $row['start_date'],
+                'endDate' => $row['end_date']
+            ];
+            $startDate->modify('+1 day');
+        }
+    }
 }

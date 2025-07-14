@@ -46,3 +46,14 @@ function deleteAppointment($courseId): int {
     $stmt->closeCursor();
     return $rowsDeleted;
 }
+
+// Create a function to select all data from the appointments' table
+function selectAllAppointments(): array {
+    $db = connectToMySQL();
+    $sql = 'SELECT * FROM appointments';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $rows;
+}

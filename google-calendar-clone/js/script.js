@@ -12,6 +12,28 @@ const modalEl = document.querySelector('.modal');
 // Create a new date object
 let currentDate = new Date();
 
+// Create a function to display the modal for adding an appointment
+const openAddModal = function (dateString) {
+    document.querySelector('#form-action').value = 'add';
+    document.querySelector('#eventId').value = '';
+    document.querySelector('#deleteEventId').value = '';
+    document.querySelector('.course-title').value = '';
+    document.querySelector('.instructor-name').value = '';
+    document.querySelector('.start-date').value = dateString;
+    document.querySelector('.end-date').value = dateString;
+    document.querySelector('.start-time').value = '09:00';
+    document.querySelector('.end-time').value = '10:00';
+
+    const eventSelector = document.querySelector('.event-selection');
+    const eventSelectionWrapper = document.querySelector('.event-selection-wrapper');
+    if (eventSelector && eventSelectionWrapper) {
+        eventSelector.innerHTML = '';
+        eventSelectionWrapper.style.display = 'none';
+    }
+
+    modalEl.style.display = 'flex';
+}
+
 // Create a function to render the calendar
 const renderCalendar = function (date = new Date()) {
     calendarEl.innerHTML = '';

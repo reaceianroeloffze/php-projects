@@ -34,6 +34,29 @@ const openAddModal = function (dateString) {
     modalEl.style.display = 'flex';
 }
 
+// Create a function to display the modal for editing an appointment
+const openEditModal = function (eventsOnDate) {
+    document.querySelector('#form-action').value = 'edit';
+    modalEl.style.display = 'flex';
+
+    const eventSelector = document.querySelector('.event-selection');
+    const eventSelectionWrapper = document.querySelector('.event-selection-wrapper');
+    eventSelector.innerHTML = '<option disabled selected>Select Event &#8595;</option>';
+
+    eventsOnDate.forEach(event => {
+            const option = document.createElement('option');
+            option.value = JSON.stringify(event);
+            option.textContent = `${event.title} - ${event.start} - ${event.end}`;
+            eventSelector.appendChild(option);
+        }
+    )
+
+    eventsOnDate > 1 ? eventSelectionWrapper.style.display = 'block'
+        : eventSelectionWrapper.style.display = 'none';
+
+    handleEventSelection(eventsOnDate[0]);
+}
+
 // Create a function to render the calendar
 const renderCalendar = function (date = new Date()) {
     calendarEl.innerHTML = '';
@@ -107,7 +130,7 @@ const renderCalendar = function (date = new Date()) {
 
             const timeEl = document.createElement('div');
             timeEl.classList.add('time');
-            timeEl.textContent = ' ' + event.startTime + ' - ' + event.endTime;
+            timeEl.textContent = ' ' + event.start + ' - ' + event.end;
 
             eventEl.appendChild(courseEl);
             eventEl.appendChild(instructorEl);
@@ -124,7 +147,7 @@ const renderCalendar = function (date = new Date()) {
         addEventBtn.textContent = '+ Add Event';
         addEventBtn.addEventListener('click', (event) => {
             event.stopPropagation();
-            // openAddModal(dateString);
+            openAddModal(dateString);
         });
 
         if (todayEvents.length > 0) {
@@ -133,7 +156,7 @@ const renderCalendar = function (date = new Date()) {
             editBtn.textContent = 'Edit';
             editBtn.addEventListener('click', event => {
                 event.stopPropagation();
-                // OpenEditModal(editBtn);
+                openEditModal(editBtn);
             });
         }
 

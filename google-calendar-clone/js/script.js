@@ -166,6 +166,21 @@ const renderCalendar = function (date = new Date()) {
     }
 }
 
+// Create a function to populate the form based on the selected event
+const handleEventSelection = function (JSONEvent) {
+    const eventData = JSON.parse(JSONEvent);
+
+    document.querySelector('#eventId').value = eventData.id;
+    document.querySelector('#deleteEventId').value = eventData.id;
+
+    const [course, instructor] = eventData.title.split(' - ').map(item => item.trim());
+    document.querySelector('.course-title').value = course || '';
+    document.querySelector('.instructor-name').value = instructor || '';
+    document.querySelector('.start-date').value = eventData.start || '';
+    document.querySelector('.end-date').value = eventData.end || '';
+    document.querySelector('.start-time').value = eventData.startTime || '';
+    document.querySelector('.end-time').value = eventData.endTime || '';
+}
 
 
 

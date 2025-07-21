@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Image gallery</h1>
+        <h1>Image Gallery</h1>
         <p>Capturing Moments &bull; Creating Memories</p>
     </header>
     <main>

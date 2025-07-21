@@ -1,5 +1,11 @@
 /* Add custom rules here... */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .img-container {
     display: grid;
 

@@ -8,5 +8,20 @@
 
 .img-container {
     display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
 
+.figure {
+    padding: 0;
+}
+
+.image-caption {
+    font-size: 1.5rem;
+}
+
+.figure-img {
+    width: 100%;
+    aspect-ratio: 4/3;
 }

@@ -9,12 +9,14 @@ $increment = 0;
 <div class="img-container">
     <?php foreach ($imageTitles as $filename => $title) : ?>
         <figure class="figure image">
-            <a href="./image.php">
-                <img src="images/<?php echo rawurldecode($filename); ?>" alt="<?php echo e($title); ?>"
-                     class="figure-img <?php echo 'img' . ++$increment; ?> ">
+            <a href="./image.php?<?php echo http_build_query(['image' => $filename]) ?>">
+                <img
+                        src="./images/<?php echo rawurldecode($filename); ?>"
+                        alt="<?php echo e($title); ?>"
+                        class="figure-img <?php echo 'img' . ++$increment; ?> ">
             </a>
-            <figcaption class="image-caption"><a
-                        href=" ./image.php?image=<?= rawurldecode($filename) ?>"><?php echo e($title); ?></a>
+            <figcaption class="image-caption">
+                <a href=" ./image.php?<?php ?><?php echo http_build_query(['image' => $filename]) ?>"><?php echo e($title); ?></a>
             </figcaption>
         </figure>
     <?php endforeach; ?>

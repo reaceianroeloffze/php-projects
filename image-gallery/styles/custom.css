@@ -25,3 +25,14 @@
     width: 100%;
     aspect-ratio: 4/3;
 }
+
+.img-title {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {
+        display: block;
+    }
+}

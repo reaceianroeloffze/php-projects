@@ -1,19 +1,55 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="author" content="Reace Ian Roeloffze">
-    <meta name="description" content="Temperature Converter">
-    <meta name="keywords" content="Temperature, Converter">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <title>Temperature Converter</title>
-</head>
-<body>
-
-</body>
-</html>
-
 <?php
+
+require_once 'functions.php';
+
+$celsiusUnit = '&#176;C';
+$fahrenheitUnit = '&#176;F';
+$kelvinUnit = '&#176;K';
+
+$temperature = 0;
+$unit_from = '';
+$unit_to = '';
+$converted_temperature = 0;
+
+if (!empty($_GET['temp']) && !empty($_GET['unit_from']) && !empty($_GET['unit_to'])) {
+    $temperature = e($_GET['temp']);
+    $unit_from = e($_GET['unit_from']);
+    $unit_to = e($_GET['unit_to']);
+}
+
+switch ($unit_from . '_' . $unit_to) {
+
+    case 'celsius' . '_' . 'kelvin' :
+        $converted_temperature = convertToKelvinFromCelsius($temperature);
+        break;
+
+    case 'celsius' . '_' . 'fahrenheit' :
+        $converted_temperature = convertToFahrenheitFromCelsius($temperature);;
+        break;
+
+    case 'fahrenheit' . '_' . 'kelvin' :
+        $converted_temperature = convertToKelvinFromFahrenheit($temperature);
+        break;
+
+    case 'fahrenheit' . '_' . 'celsius' :
+        $converted_temperature = convertToCelsiusFromFahrenheit($temperature);
+        break;
+
+    case 'kelvin' . '_' . 'celsius' :
+        $converted_temperature = convertToCelsiusFromKelvin($temperature);
+        break;
+
+    case 'kelvin' . '_' . 'fahrenheit' :
+        $converted_temperature = convertToFahrenheitFromKelvin($temperature);
+        break;
+
+    case 'celsius' . '_' . 'celsius'  || 'fahrenheit' . '_' . 'fahrenheit' || 'kelvin' . '_' . 'kelvin':
+        $error = '<p>Temperature is already in ' . $unit_to . '</p>';;
+        break;
+
+    default:
+
+        if (!is_numeric($temperature)) {
+            $error = 'Invalid temperature value';
+        }
+}

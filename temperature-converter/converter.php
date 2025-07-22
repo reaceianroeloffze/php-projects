@@ -18,11 +18,17 @@ $unit_to = '';
 $converted_temperature = 0;
 $error = '';
 
-if ($_SERVER['REQUEST_METHOD'] !== 'GET' && !empty($_GET['submit'])) {
+if (!empty($_GET['temp']) && !empty($_GET['unit_from']) && !empty($_GET['unit_to'])) {
     $temperature = e($_GET['temp']);
     $unit_from = e($_GET['unit_from']);
     $unit_to = e($_GET['unit_to']);
+}
 
+if (empty($temperature)) {
+    $error = 'Please enter temperature.';
+} else if ($unit_from === $unit_to) {
+    $error = "Can't convert temperature to same unit.";
+}
 
 switch ($unit_from . '_' . $unit_to) {
 
@@ -51,14 +57,6 @@ switch ($unit_from . '_' . $unit_to) {
         break;
 
     default:
-        if (!empty($temperature)) {
-            if (!is_numeric($temperature)) {
-                $error = 'Invalid temperature value';
-                break;
-            } else if ($unit_from === $unit_to) {
-                $error = 'Convert from and to units are same';
-                break;
-            }
 
-        }
+
 }

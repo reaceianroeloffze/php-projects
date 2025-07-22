@@ -11,32 +11,32 @@ function e($value): string
 
 function convertToCelsiusFromKelvin($value): int|float
 {
-    return $value - 273.15;
+    return round($value - 273.15, 2);
 }
 
 function convertToCelsiusFromFahrenheit($value): int|float
 {
-    return ($value - 32) * 5 / 9;
+    return round(($value - 32) * 5 / 9, 2);
 }
 
 function convertToKelvinFromCelsius($value): float|int
 {
-    return $value + 273.15;
+    return round($value + 273.15, 2);
 }
 
 function convertToKelvinFromFahrenheit($value): float|int
 {
-    return ($value + 459.67) * 5 / 9;
+    return round(($value + 459.67) * 5 / 9, 2);
 }
 
 function convertToFahrenheitFromCelsius($value): float|int
 {
-    return $value * 9 / 5 + 32;
+    return round($value * 9 / 5 + 32, 2);
 }
 
 function convertToFahrenheitFromKelvin($value): float|int
 {
-    return ($value - 273.15) * 9 / 5 + 32;
+    return round(($value - 273.15) * 9 / 5 + 32, 2);
 }
 
 function checkValue($value): void

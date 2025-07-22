@@ -1,34 +1,6 @@
 <?php
-
-    function convertToCelsiusFromKelvin($value): int|float
-    {
-        return $value - 273.15;
-    }
-
-    function convertToCelsiusFromFahrenheit($value): int|float
-    {
-        return ($value - 32) * 5 / 9;
-    }
-
-    function convertToKelvinFromCelsius($value): float|int
-    {
-        return $value + 273.15;
-    }
-
-    function convertToKelvinFromFahrenheit($value): float|int
-    {
-        return ($value + 459.67) * 5 / 9;
-    }
-
-    function convertToFahrenheitFromCelsius($value): float|int
-    {
-        return $value * 9 / 5 + 32;
-    }
-
-    function convertToFahrenheitFromKelvin($value): float|int
-    {
-        return ($value - 273.15) * 9 / 5 + 32;
-    }
+require_once 'functions.php';
+require_once 'converter.php';
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -41,30 +13,38 @@
 </head>
 <body>
 <h1>Temperature Converter</h1>
-<form method="GET" action="index.php">
+<form method="GET">
     <label>
-        <input type="number" name="temp" placeholder="Enter Temperature">
+        <input type="number" name="temp" placeholder="Enter Temperature"
+               value="<?php echo !empty($_GET['temp']) ? e($_GET['temp']) : ''; ?>">
     </label>
     <label>
         <select name="unit_from">
             <option value="">Convert from:</option>
-            <option value="celsius">Celsius (&#176;C)</option>
-            <option value="fahrenheit">Fahrenheit (&#176;F)</option>
-            <option value="kelvin">Kelvin (&#176;K)</option>
+            <?php foreach ($units as $unit => $unit_name) : ?>
+                <option value="<?php echo e($unit); ?>" <?php setSelectedAttribute('unit_from', $unit); ?>>
+                    <?php echo $unit_name; ?>
+                </option>
+            <?php endforeach; ?>
         </select>
     </label>
     <label>
         <select name="unit_to">
             <option value="">Convert to:</option>
-            <option value="celsius">Celsius (&#176;C)</option>
-            <option value="fahrenheit">Fahrenheit (&#176;F)</option>
-            <option value="kelvin">Kelvin (&#176;K)</option>
+            <?php foreach ($units as $unit => $unit_name) : ?>
+                <option value="<?php echo e($unit); ?>" <?php setSelectedAttribute('unit_to', $unit); ?>>
+                    <?php echo $unit_name; ?>
+                </option>
+            <?php endforeach; ?>
         </select>
     </label>
-    <button>Convert</button>
+    <button type="submit">Convert</button>
 </form>
 <div>
-    <p>Result: </p>
+    <?php
+    if (!empty($converted_temperature)) echo $converted_temperature;
+    else if (!empty($error)) echo $error;
+    ?>
 </div>
 </body>
 </html>

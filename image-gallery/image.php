@@ -28,7 +28,7 @@ require_once './inc/images.inc.php';
     ?>
     <h1 class="img-title"><?php echo e($title); ?></h1>
     <img src="./images/<?php echo e($image); ?>" alt="<?php echo e($title); ?>">
-    <p><?php echo e($description); ?></p>
+    <p><?php echo str_replace("\n", '<br>', e($description)); ?></p>
 <?php else: ?>
     <h1 class="img-title">Image not found</h1>
 <?php endif; ?>

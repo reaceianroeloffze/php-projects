@@ -24,4 +24,4 @@ or libraries.
 
 ### [Image Gallery](https://github.com/reaceianroeloffze/php-projects/tree/Root/image-gallery)
 
-A simple image gallery that displays an image gallery and renders specific image content dynamically when clicking on a specific image using `$_GET`, `htmlspecialchars()`, `http_build_query()`, and `rawurlencode()`. Assosiative arrays were also used.
+A simple image gallery that displays an image gallery and renders specific image content dynamically when clicking on a specific image using `$_GET`, `htmlspecialchars()`, `http_build_query()`, and `rawurlencode()`. Associative arrays were also used.

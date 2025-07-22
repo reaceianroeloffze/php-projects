@@ -30,7 +30,7 @@ require_once './inc/images.inc.php';
     <img src="./images/<?php echo e($image); ?>" alt="<?php echo e($title); ?>">
     <p><?php echo e($description); ?></p>
 <?php else: ?>
-    <h1>Image not found</h1>
+    <h1 class="img-title">Image not found</h1>
 <?php endif; ?>
 
 <a href="gallery.php">Back to Gallery</a>

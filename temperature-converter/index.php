@@ -36,22 +36,26 @@ require_once 'converter.php';
         <select name="unit_from">
             <option value="">Convert from:</option>
             <!-- Loop through an array of the various units and display them -->
-            <?php foreach ($units as $unit => $unit_name) : ?>
-                <option value="<?php echo e($unit); ?>" <?php setSelectedAttribute('unit_from', $unit); ?>>
-                    <?php echo $unit_name; ?>
-                </option>
-            <?php endforeach; ?>
+            <?php if (!empty($units)) : ?>
+                <?php foreach ($units as $unit => $unit_name) : ?>
+                    <option value="<?php echo e($unit); ?>" <?php setSelectedAttribute('unit_from', $unit); ?>>
+                        <?php echo $unit_name; ?>
+                    </option>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </select>
     </label>
     <label>
         <!-- Convert to select. All steps repeat in the convert from select -->
         <select name="unit_to">
             <option value="">Convert to:</option>
-            <?php foreach ($units as $unit => $unit_name) : ?>
-                <option value="<?php echo e($unit); ?>" <?php setSelectedAttribute('unit_to', $unit); ?>>
-                    <?php echo $unit_name; ?>
-                </option>
-            <?php endforeach; ?>
+            <?php if (!empty($units)) : ?>
+                <?php foreach ($units as $unit => $unit_name) : ?>
+                    <option value="<?php echo e($unit); ?>" <?php setSelectedAttribute('unit_to', $unit); ?>>
+                        <?php echo $unit_name; ?>
+                    </option>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </select>
     </label>
     <button type="submit">Convert</button>

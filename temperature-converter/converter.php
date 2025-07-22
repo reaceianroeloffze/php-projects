@@ -15,7 +15,7 @@ $units = [
 $temperature = 0;
 $unit_from = '';
 $unit_to = '';
-$converted_temperature = 0;
+$converted_temperature = '';
 $error = '';
 
 if (!empty($_GET['temp']) && !empty($_GET['unit_from']) && !empty($_GET['unit_to'])) {
@@ -24,11 +24,11 @@ if (!empty($_GET['temp']) && !empty($_GET['unit_from']) && !empty($_GET['unit_to
     $unit_to = e($_GET['unit_to']);
 }
 
-if (empty($temperature)) {
-    $error = 'Please enter temperature.';
+/*if (empty($temperature)) {
+    $error = "No conversion value entered.";
 } else if ($unit_from === $unit_to) {
     $error = "Can't convert temperature to same unit.";
-}
+}*/
 
 switch ($unit_from . '_' . $unit_to) {
 
@@ -55,8 +55,5 @@ switch ($unit_from . '_' . $unit_to) {
     case 'kelvin' . '_' . 'fahrenheit' :
         $converted_temperature = convertToFahrenheitFromKelvin($temperature) . ' ' . $fahrenheitUnit;
         break;
-
-    default:
-
 
 }

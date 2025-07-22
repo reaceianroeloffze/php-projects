@@ -41,13 +41,7 @@ require_once 'converter.php';
     <button type="submit">Convert</button>
 </form>
 <div>
-    <?php if (!empty($error)) : ?>
-    <p><?php echo $error; ?></p>
-    <?php endif; ?>
-
-    <?php if (!empty($converted_temperature)) : ?>
-    <p><?php echo $converted_temperature; ?></p>
-    <?php endif; ?>
+    <p><?php echo !empty($converted_temperature) ? $converted_temperature : 0 ?></p>
 </div>
 </body>
 </html>

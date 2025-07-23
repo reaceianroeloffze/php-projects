@@ -129,7 +129,7 @@ div {
 @media screen and (max-width: 1100px) {
 
     form {
-        width: 100%;
+        width: 80%;
         flex-direction: column;
     }
 
@@ -145,6 +145,10 @@ div {
 
 /* Mobile view */
 @media screen and (max-width: 760px) {
+
+    form {
+        width: 100%;
+    }
 
     h1 {
         transform: translate(-50%, -250%);

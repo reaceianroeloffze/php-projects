@@ -119,6 +119,10 @@ div {
         width: 100%;
     }
 
+    div {
+        transform: translate(-50%, 160%);
+    }
+
 }
 
 /* Mobile & tablet view */

@@ -32,7 +32,7 @@ require_once 'converter.php';
 <form method="GET">
     <label>
         <!-- Number input. Retain display after conversion -->
-        <input type="number" name="temp" placeholder="Enter Temperature"
+        <input type="number" step="any" name="temp" placeholder="Enter Temperature"
                value="<?php echo !empty($_GET['temp']) ? e($_GET['temp']) : ''; ?>">
     </label>
     <label>

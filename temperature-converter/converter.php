@@ -15,7 +15,7 @@ require_once 'functions.php';
 // Initialise Temperature units
 $celsiusUnit = '&#176;C';
 $fahrenheitUnit = '&#176;F';
-$kelvinUnit = '&#176;K';
+$kelvinUnit = 'K';
 
 // Create an associative array of the units.
 $units = [

@@ -66,7 +66,12 @@ require_once 'converter.php';
 </form>
 <div>
     <!-- Display the converted number or a default of 0 -->
-    <p><?php echo !empty($converted_temperature) ? $converted_temperature : 0 ?></p>
+    <p>
+        <?php
+        if (isset($error)) echo $error;
+        if (isset($converted_temperature)) echo $converted_temperature;
+        ?>
+    </p>
 </div>
 </body>
 </html>

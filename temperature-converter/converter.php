@@ -28,11 +28,11 @@ $units = [
 $temperature = 0;
 $unit_from = '';
 $unit_to = '';
-$converted_temperature = '';
+$converted_temperature = 0;
 $error = '';
 
 // If all the submitted data is obtained, store them in the initialised variables
-if (!empty($_GET['temp']) && !empty($_GET['unit_from']) && !empty($_GET['unit_to'])) {
+if (isset($_GET['temp']) && !empty($_GET['unit_from']) && !empty($_GET['unit_to'])) {
     $temperature = e($_GET['temp']);
     $unit_from = e($_GET['unit_from']);
     $unit_to = e($_GET['unit_to']);

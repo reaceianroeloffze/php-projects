@@ -10,6 +10,7 @@ In this repository, I will store all the projects I build using PHP.
 |         [Google Calendar Clone](#google-calendar-clone)         |
 |                 [Image Gallery](#image-gallery)                 |
 |         [Temperature Converter](#temperature-converter)         |
+|    [Air Quality Index Explorer](#air-quality-index-explorer)    |
 
 ## Projects
 
@@ -31,4 +32,6 @@ also used.
 
 ### [Temperature Converter](https://github.com/reaceianroeloffze/php-projects/tree/Root/temperature-converter)
 
-A simple responsive temperature converter. It takes a number, an initial unit, and a final unit. A from and to conversion, essentially, e.g. 12 from Celsius to Kelvin. It converts between Celsius, Kelvin, and Fahrenheit. I use `$_GET`, `switch`, PHP alternate syntax, and a bit of modularisation.
+A simple responsive temperature converter. It takes a number, an initial unit, and a final unit. A from and to
+conversion, essentially, e.g. 12 from Celsius to Kelvin. It converts between Celsius, Kelvin, and Fahrenheit. I use
+`$_GET`, `switch`, PHP alternate syntax, and a bit of modularisation.

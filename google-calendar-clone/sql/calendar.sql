@@ -21,5 +21,5 @@ CREATE TABLE IF NOT EXISTS `calendar`.`appointments`
     PRIMARY KEY (`course_id`)
 );
 
-# If mistakes are made, drop the database, make correction, and create everything again.
+# If mistakes are made, drop the database, make corrections, and create everything again.
 # DROP DATABASE calendar

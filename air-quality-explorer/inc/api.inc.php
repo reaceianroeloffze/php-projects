@@ -7,7 +7,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/functions.inc.php';
-require_once __DIR__ . '/api-key.inc.php'; // Create file and store api key there
 
 // Start a new Guzzle session
 $client = new GuzzleHttp\Client();
@@ -16,7 +15,7 @@ $client = new GuzzleHttp\Client();
 $response = $client->get('https://api.openaq.org/v3/countries', [
     'headers' => [
         'Content-Type' => 'application/json',
-        'X-API-KEY' => $apiKey, // Use own api key
+        'X-API-KEY' => getenv('OpenAQ_API_KEY'), // Use your own api key
     ]
 ]);
 

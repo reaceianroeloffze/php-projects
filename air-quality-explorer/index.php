@@ -9,8 +9,12 @@ require_once __DIR__ . '/inc/api.inc.php';
     <ul>
         <?php foreach (($filteredResponseArray ?? '') as $country) { ?>
             <li>
-                <?php echo e($country['name']) ?>
-                (<?php echo e($country['code']); ?>)
+                <a href="country.php?<?php echo http_build_query([
+                    'country' => $country['name'], 'code' => $country['code']
+                ]); ?>">
+                    <?php echo e($country['name']) ?>
+                    (<?php echo e($country['code']); ?>)
+                </a>
             </li>
         <?php } ?>
     </ul>

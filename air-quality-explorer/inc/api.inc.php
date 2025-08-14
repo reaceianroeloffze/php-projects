@@ -82,14 +82,31 @@ foreach ($filteredLocationsResponseArray as &$location) {
     ));
 }
 
+
 unset($location);
 
-// Get the first 20 locations from each country
+/* Get the first 20 locations from each country */
+
+// Group locations by country
 $locationsGroupedByCountry = [];
 
+// Set a maximum number of locations to display per country
+$maxLocationsPerCountry = 20;
 
-$locationsGroupedByCountry = array_map(fn($location) => array_slice($location, 0, 20), $locationsGroupedByCountry);
+// Loop through the filtered locations array
+foreach ($filteredLocationsResponseArray as $location) {
+    $country = $location['country']['name'];
 
+    // If that country is not set, create that country with an empty array inside it
+    if (!isset($locationsGroupedByCountry[$country])) {
+        $locationsGroupedByCountry[$country] = [];
+    }
+
+    // count all array elements and if they are less than the given max, append them
+    if (count($locationsGroupedByCountry[$country]) < $maxLocationsPerCountry) {
+        $locationsGroupedByCountry[$country][] = $location;
+    }
+}
 print_r($locationsGroupedByCountry);
 
 //$locations = [];

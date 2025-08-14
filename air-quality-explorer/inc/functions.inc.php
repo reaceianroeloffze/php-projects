@@ -1,6 +1,6 @@
 <?php
 
-function e($value)
+function e($value): string
 {
     return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
@@ -21,4 +21,4 @@ function generateGetRequest($client, $path) {
 
 function generateResponseBody($response): array {
     return json_decode($response->getBody(), true);
-};
+}

@@ -20,8 +20,6 @@ function generateGetRequest($client, $path)
     return $client->get($path, generateHeaders());
 }
 
-;
-
 function generateResponseBody($response): array
 {
     return json_decode($response->getBody(), true);

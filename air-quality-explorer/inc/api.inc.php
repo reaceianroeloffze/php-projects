@@ -14,11 +14,15 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Uri;
 
+$limit = 1000;
+$page = 1;
+$offset = 0;
+
 // Start a new Guzzle session with base uri
 $client = new Client(['base_uri' => 'https://api.openaq.org']);
 
 // Retrieve API country data
-$response_countries = generateGetRequest($client, '/v3/countries?limit=1000');
+$response_countries = generateGetRequest($client, "/v3/countries?limit={$limit}");
 // Decode the response and turn it into a multidimensional array
 $responseArrayCountries = generateResponseBody($response_countries);
 $responseArrayCountries = $responseArrayCountries['results'];
@@ -55,69 +59,25 @@ $country_id_string = implode(',', $country_ids);
 // print_r($country_ids);
 
 // Request the locations of air quality stations based on the country's id
-$response_locations = generateGetRequest($client, "/v3/locations?countries_id={$country_id_string}&limit=1000");
+$locations = [];
+for ($page = 1; $page <= 5; $page++) {
+    $response_locations = generateGetRequest($client, "/v3/locations?countries_id={$country_id_string}&limit={$limit}&page={$page}");
+    // Convert response to a multidimensional array
+    $responseArrayLocations = generateResponseBody($response_locations);
+    $responseArrayLocations = $responseArrayLocations['results'];
+    $locations = array_merge($locations, $responseArrayLocations);
+}
 
-// Convert response to a multidimensional array
-$responseArrayLocations = generateResponseBody($response_locations);
-$responseArrayLocations = $responseArrayLocations['results'];
-//print_r($responseArrayLocations);
 
-// Filter air quality stations which only have the desired measurements
 $parameters = [
     'pm25',
     'pm10',
 ];
 
-// Filter the sensors with the parameter names in the parameters array
-$filteredLocationsResponseArray = array_filter($responseArrayLocations, function ($location) use ($parameters) {
-    return count(array_filter(
-            $location['sensors'],
-            fn($sensor) => in_array(strtolower($sensor['parameter']['name']), $parameters)
-        )) > 0;
-});
-
-// Filter locations to those with sensors that have the required parameter names
-foreach ($filteredLocationsResponseArray as &$location) {
-    $location['sensors'] = array_values(array_filter($location['sensors'], fn($sensor) => in_array(strtolower($sensor['parameter']['name']), $parameters)
-    ));
-}
-
-
-unset($location);
-
-/* Get the first 20 locations from each country */
-
-// Group locations by country
-$locationsGroupedByCountry = [];
-
 // Set a maximum number of locations to display per country
-$maxLocationsPerCountry = 20;
-
-// Loop through the filtered locations array
-foreach ($filteredLocationsResponseArray as $location) {
-    $country = $location['country']['name'];
-
-    // If that country is not set, create that country with an empty array inside it
-    if (!isset($locationsGroupedByCountry[$country])) {
-        $locationsGroupedByCountry[$country] = [];
-    }
-
-    // count all array elements and if they are less than the given max, append them
-    if (count($locationsGroupedByCountry[$country]) < $maxLocationsPerCountry) {
-        $locationsGroupedByCountry[$country][] = $location;
-    }
-}
+$maxLocationsPerCountry = 10;
+$locationsGroupedByCountry = filterLocationsByCountry($responseArrayLocations, $parameters, $maxLocationsPerCountry);
 print_r($locationsGroupedByCountry);
-
-//$locations = [];
-
-/*
-// Get air quality sensors based on the location's id
-foreach ($responseArrayLocations['results'] AS $location) {
-    $response_sensors = generateGetRequest($client, "/v3/locations/{$location['id']}/sensors");
-    $locations[] = $responseArraySensors = generateResponseBody($response_sensors);
-}
-*/
 
 /*
 // Store the id of each sensor in a variable

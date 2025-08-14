@@ -53,3 +53,62 @@ foreach ($filteredCountriesResponseArray as $country) {
 $country_ids = array_values($country_ids);
 $country_id_string = implode(',', $country_ids);
 // print_r($country_ids);
+
+// Request the locations of air quality stations based on the country's id
+$response_locations = generateGetRequest($client, "/v3/locations?countries_id={$country_id_string}&limit=1000");
+
+// Convert response to a multidimensional array
+$responseArrayLocations = generateResponseBody($response_locations);
+$responseArrayLocations = $responseArrayLocations['results'];
+//print_r($responseArrayLocations);
+
+// Filter air quality stations which only have the desired measurements
+$parameters = [
+    'pm25',
+    'pm10',
+];
+
+// Filter the sensors with the parameter names in the parameters array
+$filteredLocationsResponseArray = array_filter($responseArrayLocations, function ($location) use ($parameters) {
+    return count(array_filter(
+            $location['sensors'],
+            fn($sensor) => in_array(strtolower($sensor['parameter']['name']), $parameters)
+        )) > 0;
+});
+
+// Filter locations to those with sensors that have the required parameter names
+foreach ($filteredLocationsResponseArray as &$location) {
+    $location['sensors'] = array_values(array_filter($location['sensors'], fn($sensor) => in_array(strtolower($sensor['parameter']['name']), $parameters)
+    ));
+}
+
+unset($location);
+
+// Get the first 20 locations from each country
+$locationsGroupedByCountry = [];
+
+
+$locationsGroupedByCountry = array_map(fn($location) => array_slice($location, 0, 20), $locationsGroupedByCountry);
+
+print_r($locationsGroupedByCountry);
+
+//$locations = [];
+
+/*
+// Get air quality sensors based on the location's id
+foreach ($responseArrayLocations['results'] AS $location) {
+    $response_sensors = generateGetRequest($client, "/v3/locations/{$location['id']}/sensors");
+    $locations[] = $responseArraySensors = generateResponseBody($response_sensors);
+}
+*/
+
+/*
+// Store the id of each sensor in a variable
+$sensor_id = '';
+foreach ($responseArraySensors['results'] AS $sensor) {
+    $sensor_id = $sensor['id'];
+}
+
+// Get air quality measurements based on sensor id
+$response_measurements = $client->get("/v3/sensors/{$sensor_id}/hours", generateHeaders());
+*/

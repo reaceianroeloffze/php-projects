@@ -24,9 +24,9 @@ $response_locations = generateGetRequest($client, "/v3/locations?limit={$limit}&
 // Convert response to a multidimensional array
 $responseArrayLocations = generateResponseBody($response_locations);
 $responseArrayLocations = $responseArrayLocations['results'];
-echo '<pre>';
+/*echo '<pre>';
 print_r($responseArrayLocations);
-echo '</pre>';
+echo '</pre>';*/
 
 // Request the locations of air quality stations
 if (isset($database)) {
@@ -40,12 +40,13 @@ if (isset($database)) {
         $responseArrayLocations = generateResponseBody($response_locations);
         $locations = $responseArrayLocations['results'] ?? [];
 
+        // Insert location data into a database
         if (empty($locations)) {
             break;
         }
         $stmt = $database->prepare('
-                INSERT INTO locations (id, country_id, name, latitude, longitude, owner, provider)
-                    VALUES (:id, :country_id, :name, :latitude, :longitude, :owner, :provider)
+                INSERT INTO locations (id, country_id, name, latitude, longitude)
+                    VALUES (:id, :country_id, :name, :latitude, :longitude)
                     ON CONFLICT(id) DO UPDATE SET 
                         name = :name,
                         latitude = excluded.latitude,
@@ -59,8 +60,6 @@ if (isset($database)) {
                 ':name' => $location['name'] ?? 'N/A',
                 ':latitude' => $location['coordinates']['latitude'] ?? NULL,
                 ':longitude' => $location['coordinates']['longitude'] ?? NULL,
-                ':owner' => $location['owner']['name'],
-                ':provider' => $location['provider']['name'],
             ]);
         }
 

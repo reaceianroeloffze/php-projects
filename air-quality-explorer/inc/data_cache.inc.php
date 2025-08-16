@@ -25,8 +25,6 @@ $database->exec('
         name TEXT,
         latitude REAL,
         longitude REAL,
-        owner TEXT,
-        provider TEXT,
         FOREIGN KEY (country_id) REFERENCES countries(id)
     );
 ');

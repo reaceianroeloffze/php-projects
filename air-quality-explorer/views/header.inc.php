@@ -11,4 +11,4 @@
         <h1>AQI-Explorer</h1>
         <nav><a href="index.php">Overview</a></nav>
     </header>
-    <main>
+    <main style="text-align: center;">

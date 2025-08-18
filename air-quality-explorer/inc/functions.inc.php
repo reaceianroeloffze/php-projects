@@ -70,3 +70,10 @@ function filterLocationsByCountry(array $locations, array $parameters, int $maxL
     // return the filtered array
     return $locationsGroupedByCountry;
 }
+
+function startNewGuzzleClient(): GuzzleHttp\Client
+{
+    return new GuzzleHttp\Client([
+        'base_uri' => 'https://api.openaq.org/v1/',
+    ]);
+}

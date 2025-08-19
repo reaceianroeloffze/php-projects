@@ -28,7 +28,7 @@ print_r($locations);
 echo '</pre>';
 */
 
-$currentDate = trim(date('Y-m-d'));
+$currentDate = getcurrentDate();
 
 ?>
 
@@ -58,7 +58,7 @@ $currentDate = trim(date('Y-m-d'));
                                     'location_id' => $location['id'],
                                     'location_name' => $location['name'],
                             ]
-                    ) ?>" target="_blank" rel="noopener noreferrer">
+                    ) ?>" rel="noopener noreferrer">
                         <?php echo (!empty($location['locality'])) ? e($location['name']) . ', ' . e($location['locality']) : e($location['name']) ?>
                     </a>
                 </p>

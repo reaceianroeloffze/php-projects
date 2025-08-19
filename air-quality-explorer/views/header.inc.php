@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles/simple.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/simple.css"/>
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>AQI-Explorer</h1>
-        <nav><a href="index.php">Overview</a></nav>
-    </header>
-    <main style="text-align: center;">
+<header>
+    <h1>AQI-Explorer</h1>
+    <nav>
+        <a href="index.php">Overview</a>
+        <?php if (isset($location_name)) { ?>
+        <a href="javascript:history.back()">Back</a>
+        <?php } ?>
+    </nav>
+</header>
+<main style="text-align: center;">

@@ -10,42 +10,91 @@ if (!empty($_GET['location_id'])) {
     $location_name = $_GET['location_name'];
 }
 
+// Start a new Guzzle Client
 $client = startNewGuzzleClient();
+
 
 $limit = 1000;
 
-$response_sensors = generateGetRequest($client, "/v3/locations/{$location_id}/sensors?limit={$limit}");
+// Request sensors from OpenAQ
+$response_sensors = generateGetRequest($client, "/v3/locations/$location_id/sensors?limit=$limit");
 $responseArraySensors = generateResponseBody($response_sensors);
 $sensors = $responseArraySensors['results'] ?? [];
-echo '<pre>';
+/*echo '<pre>';
 print_r($sensors);
-echo '</pre>';
+echo '</pre>';*/
 
+// Define parameters to display
 $parameters = ['pm25', 'pm10'];
 
-$measurements = [];
+// Create an array to store sensor IDs
+$sensor_ids = [];
 
+// Loop through sensors and extract relevant sensor IDs
 foreach ($sensors as $sensor) {
     if (!in_array($sensor['parameter']['name'], $parameters)) {
         continue;
     }
+    $sensor_ids[] = $sensor['id'];
+}
 
-    $parameter = $sensor['parameter']['name'];
-    $latestMeasurement = $sensor['latest']['value'] ?? null;
-    $parameterUnits = $sensor['parameter']['units'] ?? null;
-    $parameterDisplayName = $sensor['parameter']['displayName'] ?? null;
+/*echo '<pre>';
+print_r($sensor_ids);
+echo '</pre>';
+die();*/
 
-    if (!isset($measurements[$parameter])) {
-        $measurements[$parameter] = [];
-        $measurements[$parameter]['displayName'] = $parameterDisplayName;
-        $measurements[$parameter]['measurementUnits'] = $parameterUnits;
-        $measurements[$parameter]['latestMeasurementValue'] = $latestMeasurement;
-    }
+// Store parameter measurements
+$measurements = [];
 
-    if (count(array_intersect(array_keys($measurements), $parameters)) === count($parameters)) {
-        break;
+// Store the current year
+$currentYear = date('Y');
+
+// Loop through sensors and extract measurements for specified parameters
+foreach ($sensor_ids as $sensor_id) {
+
+    // Request measurements from hour to month from OpenAQ
+    $response_measurements = generateGetRequest($client, "/v3/sensors/$sensor_id/days/monthly?limit=$limit&date_from=$currentYear-01-01&date_to=$currentYear-12-31");
+    $responseArrayMeasurements = generateResponseBody($response_measurements);
+    $monthlyMeasurements = $responseArrayMeasurements['results'] ?? [];
+    /*    echo '<pre>';
+        print_r($monthlyMeasurements);
+        echo '</pre>';*/
+
+
+    // Loop through monthly measurements and store them
+    foreach ($monthlyMeasurements as $measurement) {
+        // Format the date to YYYY-MM
+        $dateFormat = substr($measurement['period']['datetimeFrom']['local'], 0, 7);
+        $measurementValue = $measurement['value'] ?? null; // Extract the measurement value
+        $parameter = $measurement['parameter']['name']; // Extract the parameter name
+        $measurementUnits = $measurement['parameter']['units'] ?? null; // Extract the measurement units
+        // if there is no array with the date format as a key set for the date format, create one
+        if (!isset($measurements[$dateFormat])) {
+            $measurements[$dateFormat] = [];
+        }
+        $measurements[$dateFormat][$parameter] = [];
+        $measurements[$dateFormat][$parameter]['measurementValue'] = $measurementValue;
+        $measurements[$dateFormat][$parameter]['measurementUnits'] = $measurementUnits;
+        // Check if all parameters have been extracted and break the loop if true
+        /* if (count(array_intersect(array_keys($measurements), $parameters)) === count($parameters)) {
+             break;
+         }*/
     }
 }
+
+$parameter_names = [];
+
+foreach ($measurements as $month => $monthMeasurements) {
+    foreach ($monthMeasurements as $parameter => $measurement) {
+        $parameter_names[] = $parameter;
+    }
+}
+
+$parameter_names = array_unique($parameter_names);
+
+/*echo '<pre>';
+print_r($measurements);
+echo '</pre>';*/
 
 ?>
 
@@ -63,31 +112,34 @@ foreach ($sensors as $sensor) {
 
 <?php require_once __DIR__ . '/views/header.inc.php'; ?>
 
+<!-- If the location has measurements, display them in a table -->
 <?php if (!empty($measurements)) { ?>
-    <h2>Measurements for <?php echo e($location_name); ?></h2>
-    <table style="width: 100%">
-        <thead>
-        <tr>
-            <th>Particle Concentration</th>
-            <th>Latest Measurement Value</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($measurements as $parameter => $measurement) { ?>
-            <?php if (!empty($measurement['latestMeasurementValue'])) { ?>
-                <tr>
-                    <td><?php echo e($measurement['displayName']); ?></td>
-                    <td><?php echo e(round($measurement['latestMeasurementValue'], 2)) . ' ' . $measurement['measurementUnits']; ?></td>
-                </tr>
-            <?php } ?>
+<h2>Measurements for <?php echo e($location_name); ?></h2>
+<table style="width: 100%">
+    <thead>
+    <tr>
+        <th>Month</th>
+        <?php foreach ($parameter_names as $parameter) { ?>
+            <th><?php echo e($parameter . ' Concentration'); ?></th>
         <?php } ?>
-        </tbody>
-    </table>
-<?php } else { ?>
-    <h2>No new measurements found for <?php echo e($location_name); ?></h2>
-<?php } ?>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through measurements and display them -->
+    <?php foreach ($measurements as $month => $monthMeasurements) { ?>
+        <tr>
+            <td><?php echo e($month); ?></td>
+            <?php foreach ($monthMeasurements as $parameter => $measurement) { ?>
+                <td>
+                    <?php echo e($measurement['measurementValue'] . ' ' . $measurement['measurementUnits']); ?>
+                </td>
+            <?php } ?>
+        </tr>
+    <?php } ?>
+    <?php } else { ?>
+        <h2>No measurements found for <?php echo e($location_name); ?></h2>
+    <?php } ?>
 
-
-<?php require_once __DIR__ . '/views/footer.inc.php'; ?>
+    <?php require_once __DIR__ . '/views/footer.inc.php'; ?>
 </body>
 </html>

@@ -15,7 +15,7 @@
                 country page where each location is listed -->
                 <?php if (isset($location_name)) : ?>
                     <!-- Use JavaScript to go back to the previous page -->
-                    <a href="javascript:history.back()">Back to Country Location</a>
+                    <a href="javascript:history.back()">Back to Country Locations</a>
                 <?php endif; ?>
             </nav>
         </header>

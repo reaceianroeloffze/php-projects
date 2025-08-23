@@ -19,12 +19,6 @@
     $response_sensors = generateGetRequest($client, "/v3/locations/$location_id/sensors?limit=$limit");
     $responseArraySensors = generateResponseBody($response_sensors);
     $sensors = $responseArraySensors['results'] ?? [];
-    /*echo '<pre>';
-    print_r($sensors);
-    echo '</pre>';*/
-
-    // Define parameters to display
-    // $parameters = ['pm25', 'pm10'];
 
     // Create an array to store sensor IDs
     $sensor_ids = [];
@@ -36,11 +30,6 @@
         }*/
         $sensor_ids[] = $sensor['id'];
     }
-
-    /*echo '<pre>';
-    print_r($sensor_ids);
-    echo '</pre>';
-    die();*/
 
     // Store parameter measurements
     $measurements = [];
@@ -57,9 +46,6 @@
         $response_measurements = generateGetRequest($client, "/v3/sensors/$sensor_id/days/monthly?limit=$limit&date_from=$currentYear-01-01&date_to=$currentYear-12-31");
         $responseArrayMeasurements = generateResponseBody($response_measurements);
         $monthlyMeasurements = $responseArrayMeasurements['results'] ?? [];
-        /*  echo '<pre>';
-            print_r($monthlyMeasurements);
-            echo '</pre>';*/
 
         // Loop through monthly measurements and store them
         foreach ($monthlyMeasurements as $measurement) {
@@ -73,75 +59,142 @@
                 $measurements[$dateFormat] = [];
             }
             // Only append measurements for specified parameters
-            if ($parameter === 'pm25' || $parameter === 'pm10') {
-                // Create an array for the parameter
-                $measurements[$dateFormat][$parameter] = [];
-                // Append the measurement value and units to the parameter array
-                $measurements[$dateFormat][$parameter]['measurementValue'] = $measurementValue;
-                $measurements[$dateFormat][$parameter]['measurementUnits'] = $measurementUnits;
-            }
+
+            // Create an array for the parameter
+            $measurements[$dateFormat][$parameter] = [];
+            // Append the measurement value and units to the parameter array
+            $measurements[$dateFormat][$parameter]['measurementValue'] = $measurementValue;
+            $measurements[$dateFormat][$parameter]['measurementUnits'] = $measurementUnits;
         }
     }
 
-    // Extract and store parameter names
-    $parameter_names = [];
+    // Store the desired parameters in an array
+    $desiredParameters = ['pm25', 'pm10'];
 
-    // Loop through measurements and extract parameter names
-    foreach ($measurements as $month => $monthMeasurements) {
-        foreach ($monthMeasurements as $parameter => $paramName) {
-            $parameter_names[] = $parameter;
-        }
+    // Create a table header array
+    $tableHeaders = ['Month'];
+    foreach ($desiredParameters as $parameter) {
+        $tableHeaders[] = strtoupper($parameter) . ' Concentration';
     }
 
-    // Remove duplicate parameter names
-    $parameter_names = array_unique($parameter_names);
+    // Create an array to store the table data
+    $tableData = [$tableHeaders];
 
-    /*	echo '<pre>';
-        print_r($parameter_names);
-        echo '</pre>';
-        die();*/
+    // Loop through the measurements and create a table row for each month
+    // according to the desired parameters
+    foreach ($measurements as $month => $parameters) {
+        // Skip the month if it doesn't have measurements for all desired parameters
+        if (empty($parameters[$desiredParameters[0]]['measurementValue']) && empty($parameters[$desiredParameters[1]]['measurementValue'])) {
+            continue;
+        }
+        $tableRow = [$month];
+        // Loop through the desired parameters and store their respective values and units
+        foreach ($desiredParameters as $parameter) {
+            $value = $parameters[$parameter]['measurementValue'] ?? NULL;
+            $units = $parameters[$parameter]['measurementUnits'] ?? NULL;
+            // Format the value and units for display. Display 'N/A' if there's no value or units.
+            $tableRow[] = $value !== NULL && $units !== NULL && $value > 0 ? $value . ' ' . $units : 'N/A';
+        }
+        // Add the table row to the table data array
+        $tableData[] = $tableRow;
+    }
 
+    // Sort the table data by date in chronological order
+    usort($tableData, fn($a, $b) => strtotime($a[0]) - strtotime($b[0]));
 
-    /*echo '<pre>';
-    print_r($measurements);
-    echo '</pre>';
-    die();*/
+    // Extract the months to be used as labels in the graph
+    $labels = array_column($tableData, 0);
+    // Remove the first element (Month) from the label array
+    array_shift($labels);
+
+    // Extract the PM2.5 concentration data from the table data
+    $pm25Data = array_column($tableData, 1);
+    // Remove the heading 'PM2.5 Concentration' from the array
+    array_shift($pm25Data);
+    // Convert the PM2.5 concentration data to floats and replace 'N/A' values with 0
+    $pm25Data = array_map(fn($value) => str_contains($value, 'N/A') ? 0 : floatval($value), $pm25Data);
+
+    // Extract the PM10 concentration data from the table data
+    $pm10Data = array_column($tableData, 2);
+    // Remove the heading 'PM10 Concentration' from the array
+    array_shift($pm10Data);
+    // Convert the PM10 concentration data to floats and replace 'N/A' values with 0
+    $pm10Data = array_map(fn($value) => str_contains($value, 'N/A') ? 0 : floatval($value), $pm10Data);
 
 ?>
 
+<!-- Display the header -->
 <?php require_once __DIR__ . '/views/header.inc.php'; ?>
 
 <!-- If the location has measurements, display them in a table -->
 <?php if (!empty($measurements[$dateFormat])) : ?>
     <h2>Measurements for <?php echo e($location_name); ?></h2>
+    <!-- Load the graphing library -->
+    <script src="/scripts/chart.umd.js"></script>
+    <!-- Display a graph of the measurements in a canvas -->
+    <canvas class="aqi aqi_graph" style="background-color: aliceblue"></canvas>
+    <!-- Use JavaScript to create a graph of the measurements -->
+    <script>
+        // Retrieve the canvas element to draw the graph in
+        const ctx = document.querySelector('.aqi_graph');
+        // Create a new instance of a chart using the canvas element and the data
+        const chart = new Chart(ctx, {
+            type: 'line', // Specify the type of chart (line, bar, etc.)
+            options: {
+                responsive: true, // Enable responsive layout
+                scales: {
+                    y: {
+                        beginAtZero: true, // Start the y-axis at 0
+                    },
+
+                }
+            },
+            // Provide the data for the chart
+            data: {
+                // Provide the labels for the graph
+                labels: <?php echo json_encode($labels); ?>,
+                // Provide the data for the graph
+                datasets: [
+                    {
+                        // Specify the data for the PM2.5 concentration line
+                        label: 'PM2.5',
+                        data: <?php echo json_encode($pm25Data); ?>,
+                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    },
+                    {
+                        // Specify the data for the PM10 concentration line
+                        label: 'PM10',
+                        data: <?php echo json_encode($pm10Data); ?>,
+                        borderColor: 'rgb(53, 162, 235)',
+                        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                    }
+                ]
+            }
+        });
+    </script>
+    <!-- Build and populate a table using the table data array -->
     <table style="width: 100%">
         <thead>
             <tr>
-                <th>Month</th> <!-- display the month as a table header -->
+                <!-- display the month as a table header -->
                 <!-- Loop through parameter names and display them as table headers -->
-                <?php foreach ($parameter_names as $parameter) : ?>
-                    <th><?php echo e($parameter . ' Concentration'); ?></th>
+                <!-- Only add the parameter heading if it contains data for at least one month -->
+                <?php foreach ($tableData[0] as $parameter) : ?>
+                    <th><?php echo e($parameter); ?></th>
                 <?php endforeach; ?>
             </tr>
         </thead>
         <tbody>
-            <!-- Loop through measurements and display them -->
-            <?php foreach ($measurements as $month => $monthMeasurements) : ?>
+            <!-- Loop through the table data and output each row -->
+            <?php for ($i = 1; $i < count($tableData); $i++) : ?>
                 <tr>
-                    <!-- Only display the month and its measurements if that month has any measurements -->
-                    <?php if (!empty($monthMeasurements)) : ?>
-                        <td><?php echo e($month); ?></td>
-                        <!-- Display the measurement values for each specified parameter -->
-                        <?php foreach ($monthMeasurements as $parameter => $measurement) : ?>
-                            <td>
-                                <?php if (in_array($parameter, $parameter_names)) : ?>
-                                    <?php echo e($measurement['measurementValue'] . ' ' . $measurement['measurementUnits']); ?>
-                                <?php endif; ?>
-                            </td>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+                    <!-- Loop through the values in each row and output them -->
+                    <?php for ($j = 0; $j < count($tableData[$i]); $j++) : ?>
+                        <td><?php echo e($tableData[$i][$j]); ?></td>
+                    <?php endfor; ?>
                 </tr>
-            <?php endforeach; ?>
+            <?php endfor; ?>
         </tbody>
     </table>
 <?php else : ?>
@@ -149,5 +202,6 @@
     <h2>No measurements found for <?php echo e($location_name); ?></h2>
 <?php endif; ?>
 
+<!-- Display the footer -->
 <?php require_once __DIR__ . '/views/footer.inc.php'; ?>
 

@@ -43,7 +43,7 @@
     <!-- If there are locations, display them -->
     <?php if (!empty($locations) && is_array($locations)) : ?>
         <!-- Display the country name in a heading -->
-        <h2>Air Quality Monitoring Stations in <?php echo e($country); ?></h2>
+        <h2>Air Quality Monitoring Locations in <?php echo e($country); ?></h2>
         <p>
             Select a location to view an average of hourly pm2.5/25 and/or pm10 particle measurements over the period
             of each month for the current year.

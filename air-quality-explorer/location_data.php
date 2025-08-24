@@ -127,6 +127,7 @@
     // Create an array to store the graph data
     $graphData = [];
 
+    // Only add the graph data if there is at least one measurement for the month
     if (array_sum($pm25Data) > 0) {
         $graphData[] = [
             // pm2.5 data
@@ -138,6 +139,7 @@
         ];
     }
 
+    // Only add the graph data if there is at least one measurement for the month
     if (array_sum($pm10Data) > 0) {
         $graphData[] = [
             'label' => 'PM10 in ' . $measurements[$dateFormat]['pm10']['measurementUnits'],
@@ -155,7 +157,10 @@
 
     <!-- If the location has measurements and the right parameters, display them in a table -->
 <?php if (!empty($measurements[$dateFormat]) && (in_array($desiredParameters[0], $parameterNames) || in_array($desiredParameters[1], $parameterNames))) : ?>
-    <h2>Measurements for <?php echo e($location_name); ?></h2>
+    <h2>
+        <?php echo $desiredParameters[0]; ?> and/or <?php echo $desiredParameters[1]; ?> Measurements
+        for <?php echo e($location_name); ?>
+    </h2>
     <!-- Load the graphing library -->
     <script src="./scripts/chart.umd.js"></script>
     <!-- Display a graph of the measurements in a canvas -->

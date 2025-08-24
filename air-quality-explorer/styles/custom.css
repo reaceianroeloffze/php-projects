@@ -1,0 +1,24 @@
+.canvas-container {
+    width: 90%;
+    height: 350px;
+    margin: auto;
+}
+
+.aqi_graph {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .canvas-container {
+        width: 100%; height: 250px;
+    }
+
+}

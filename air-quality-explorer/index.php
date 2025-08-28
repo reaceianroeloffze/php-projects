@@ -3,6 +3,9 @@
     require_once __DIR__ . '/vendor/autoload.php';
     require_once __DIR__ . '/inc/functions.inc.php';
 
+    // Enable Guzzle error handling
+    use GuzzleHttp\Exception\BadResponseException;
+
     // Start a new Guzzle Client
     $client = startNewGuzzleClient();
 
@@ -12,12 +15,19 @@
     // Initialise an empty array to store the countries
     $countries = NULL;
 
+    $error = NULL;
+
     // Request countries from OpenAQ
-    $response_countries = generateGetRequest($client, "/v3/countries?limit=$limit");
-    // Convert JSON data to a PHP associative array
-    $responseArrayCountries = generateResponseBody($response_countries);
-    // Store the results
-    $countries = $responseArrayCountries['results'] ?? [];
+    try {
+        $response_countries = generateGetRequest($client, "/v3/countries?limit=$limit");
+        // Convert JSON data to a PHP associative array
+        $responseArrayCountries = generateResponseBody($response_countries);
+        // Store the results
+        $countries = $responseArrayCountries['results'] ?? [];
+    } catch (badResponseException $e) {
+        $error = $e->getMessage();
+    }
+
 
     // Provide an array of specific countries to display on the homepage
     $SelectedCountries = [
@@ -65,6 +75,7 @@
 <?php else : ?>
     <!-- If no countries are found, display a message indicating such -->
     <h1>No data to load</h1>
+    <?php echo "<p>$error</p>"; ?>
 <?php endif ?>
 
 <!-- Display the footer -->

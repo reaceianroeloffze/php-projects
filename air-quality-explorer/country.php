@@ -1,11 +1,15 @@
 <?php
 
+
     require_once __DIR__ . '/vendor/autoload.php';
     require_once __DIR__ . '/inc/functions.inc.php';
 
     // Initialise variables
     $country = NULL;
     $country_id = NULL;
+
+    // Enable Guzzle error handling
+    use GuzzleHttp\Exception\BadResponseException;
 
     // Get the country name and ID from the query string
     if (!empty($_GET['country']) && !empty($_GET['id'])) {
@@ -19,12 +23,18 @@
     // Start a new Guzzle Client
     $client = startNewGuzzleClient();
 
+    $error = NULL;
+
     // Request locations from OpenAQ
-    $response_locations = generateGetRequest($client, "/v3/locations?countries_id=$country_id&limit=$limit");
-    // Convert the JSON data to a PHP associative array
-    $responseArrayLocations = generateResponseBody($response_locations);
-    // Store the results
-    $locations = $responseArrayLocations['results'] ?? [];
+    try {
+        $response_locations = generateGetRequest($client, "/v3/locations?countries_id=$country_id&limit=$limit");
+        // Convert the JSON data to a PHP associative array
+        $responseArrayLocations = generateResponseBody($response_locations);
+        // Store the results
+        $locations = $responseArrayLocations['results'] ?? [];
+    } catch (badResponseException $e) {
+        $error = $e->getMessage();
+    }
     /*
     echo '<pre>';
     print_r($locations);
@@ -77,6 +87,7 @@
         </div>
     <?php else : ?>
         <h2>No data to load</h2>
+        <?php echo "<p>$error</p>"; ?>
     <?php endif; ?>
 </section>
 

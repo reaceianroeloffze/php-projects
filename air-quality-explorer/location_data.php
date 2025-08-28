@@ -10,15 +10,26 @@
         $location_name = $_GET['location_name'];
     }
 
+    // Enable Guzzle error handling
+    use GuzzleHttp\Exception\BadResponseException;
+
     // Start a new Guzzle Client
     $client = startNewGuzzleClient();
 
     $limit = 1000;
 
+    $error = NULL;
+
+    $sensors = NULL;
+
     // Request sensors from OpenAQ
-    $response_sensors = generateGetRequest($client, "/v3/locations/$location_id/sensors?limit=$limit");
-    $responseArraySensors = generateResponseBody($response_sensors);
-    $sensors = $responseArraySensors['results'] ?? [];
+    try {
+        $response_sensors = generateGetRequest($client, "/v3/locations/$location_id/sensors?limit=$limit");
+        $responseArraySensors = generateResponseBody($response_sensors);
+        $sensors = $responseArraySensors['results'] ?? [];
+    } catch (BadResponseException $e) {
+        $error = $e->getMessage();
+    }
 
     // Create an array to store sensor IDs
     $sensor_ids = [];
@@ -223,6 +234,7 @@
     <!-- If no measurements are found, display a message -->
     <h2>No <?php echo $desiredParameters[0]; ?> or <?php echo $desiredParameters[1] ?> measurements found
         for <?php echo e($location_name); ?></h2>
+    <?php echo "<p>$error</p>"; ?>
 <?php endif; ?>
 
     <!-- Display the footer -->

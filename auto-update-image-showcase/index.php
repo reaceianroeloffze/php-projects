@@ -1,5 +1,10 @@
 <?php
 
+    // Locate file paths
+    $filePaths = pathinfo(__DIR__ . '/images/file.txt', PATHINFO_DIRNAME);
+
+
+
 ?>
 
 <!DOCTYPE html>

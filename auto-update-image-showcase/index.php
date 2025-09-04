@@ -12,7 +12,12 @@
     // Remove the '.' and '..' entries
     $imageFiles = array_diff($files, ['.', '..', 'file.txt']);
 
+    // Store desired file extensions in an array
+    $desiredFileExtensions = glob('./images/*.{jpg,txt,png}', GLOB_BRACE);
 
+    // Extract the file extensions from the file paths
+    $fileExtensions = array_map(fn($filePath) => pathinfo($filePath, PATHINFO_EXTENSION), $desiredFileExtensions);
+    $fileExtensions = array_unique($fileExtensions);
 
 
 ?>

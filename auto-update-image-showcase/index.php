@@ -3,6 +3,16 @@
     // Locate file paths
     $filePaths = pathinfo(__DIR__ . '/images/file.txt', PATHINFO_DIRNAME);
 
+    // Locate file paths
+    $filePaths = pathinfo(__DIR__ . '/images/file.txt', PATHINFO_DIRNAME);
+
+    // Get the image files
+    $files = scandir($filePaths);
+
+    // Remove the '.' and '..' entries
+    $imageFiles = array_diff($files, ['.', '..', 'file.txt']);
+
+
 
 
 ?>

@@ -11,6 +11,7 @@ In this repository, I will store all the projects I build using PHP.
 |                 [Image Gallery](#image-gallery)                 |
 |         [Temperature Converter](#temperature-converter)         |
 |    [Air Quality Index Explorer](#air-quality-index-explorer)    |
+|    [Auto-Update Image Showcase](#auto-update-image-showcase)    |"
 
 ## Projects
 
@@ -51,3 +52,20 @@ I tried to set my code up in such a way that it would be easy to add more or rep
 As it stands, there is no option to choose a different parameter on the site itself, only in the code. For now, the intent for this project is to showcase the power of PHP (as all the projects in this repo will hopefully do) and to populate a webpage/site using an API to request data and render it. I wanted to enhance my PHP skills and learn more about APIs and how to use them.
 
 I use [chart.js](https://www.chartjs.org/) to represent the data visually, followed by tabulation of the data. The data I request is a summary, or average, of hourly data over the period of 1 month.
+
+### [Auto-Update Image Showcase](https://github.com/reaceianroeloffze/php-projects/tree/Root/auto-update-image-showcase)
+
+This site uses PHP to dynamically generate images with descriptions by reading/scanning a directory of images and text files and rendering them on the page. The image and description are only added when an image is added to the images folder. There is no means of uploading a file on the webpage yet. I use:
+
+- `scandir();`
+- `pathinfo();`
+- `is_dir();`
+- `is_file();`
+- `file_exists();`
+- `glob();`
+- `file();`
+- `strcmp();` 
+
+All are built into PHP. No external libraries or frameworks were used.
+
+I also got some practice in with using PHPDoc comments/DocBlocks using built-in methods and functions as references.

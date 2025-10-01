@@ -1,0 +1,13 @@
+/* General and mobile screen styles */
+
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Russo+One&display=swap');
+
+/* Across all devices */
+html {
+    font-family: 'Aldrich', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Russo One', sans-serif;
+}

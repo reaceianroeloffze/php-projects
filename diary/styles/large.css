@@ -1,1 +1,20 @@
 /* Desktop screen styles */
+
+@media screen and (min-width: 1024px) {
+
+    /* ------------------ Header/Nav Styles ------------------ */
+
+    /* Style the navigation bar */
+    .site-navigation {
+        justify-content: space-around;
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    /* Style the new entry button */
+    .new-entry-btn {
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+

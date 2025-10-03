@@ -1,1 +1,14 @@
 /* Tablet screen styles */
+
+@media screen and (min-width: 768px) {
+
+    /* ------------------ Header/Nav Styles ------------------ */
+
+    /* Style the navigation bar */
+    .site-navigation {
+        justify-content: space-between;
+        padding: 10px;
+        flex-direction: row;
+        height: 5rem;
+    }
+}

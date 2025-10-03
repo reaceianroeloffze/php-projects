@@ -1,13 +1,102 @@
-/* General and mobile screen styles */
+/* General site and mobile screen styles */
 
 /* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Russo+One&display=swap');
 
-/* Across all devices */
+/* ------------------ Across all devices ------------------ */
+
+/* Font for the entire site */
 html {
     font-family: 'Aldrich', sans-serif;
 }
 
+/* Font for all site headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Russo One', sans-serif;
 }
+
+/* Remove text decoration from all links */
+a {
+    text-decoration: none;
+}
+
+/* ------------------ Header/Nav Styles ------------------ */
+
+/* Style the navigation bar */
+.site-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #212d22;
+    row-gap: 10px;
+    font-size: 1.4rem;
+    position: sticky;
+}
+
+/* Style the homepage link */
+.site-navigation__homepage-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #f4f0ec;
+}
+
+/* Homepage link hover effect */
+.site-navigation__homepage-link:hover {
+    text-decoration: underline;
+}
+
+/* Homepage link active effect */
+.site-navigation__homepage-link:active {
+    color: #DAA360;
+}
+
+/* Style the logo */
+.homepage-link__logo {
+    width: 3.5rem;
+    border-radius: 5%;
+}
+
+/* Style the new entry button */
+.new-entry-btn {
+    background-color: #DAA360;
+    border: 4px outset #BEAD9B;
+    color: #311914;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Style colour of the entry button link */
+.new-entry-btn__btn-link {
+    color: #311914;
+}
+
+/* Button hover effect */
+.new-entry-btn:hover {
+    background-color: #c88b44;
+}
+
+/* Button active effect */
+.new-entry-btn:active {
+    background-color: #311914;
+    color: #DAA360;
+    border: 4px inset #BEAD9B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

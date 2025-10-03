@@ -8,18 +8,20 @@
         <meta name="author" content="Reace Ian Roeloffze">
         <meta name="description" content="Diary App">
         <link rel="stylesheet" href="styles/modern-normalize.css" type="text/css">
-        <link rel="stylesheet" href="styles/" type="text/css">
-        <title>Diary</title>
+        <link rel="stylesheet" href="styles/small.css" type="text/css">
+        <link rel="stylesheet" href="styles/medium.css" type="text/css">
+        <link rel="stylesheet" href="styles/large.css" type="text/css">
+        <title>Homepage | Diary</title>
     </head>
     <body>
-        <header class="main-header">
-            <nav class="site-navigation">
-                <div class="logo-container">
-                    <a href="index.html" class="homepage-link">
-                        <img src="images/journal-logo.png" alt="Logo of a journal" class="logo">
-                    </a>
-                </div>
-            </nav>
-        </header>
+        <nav class="site-navigation">
+            <a href="index.html" title="Go to homepage" class="site-navigation__homepage-link">
+                <img src="images/journal-logo.png" alt="Logo of a journal" class="homepage-link__logo">My Diary
+            </a>
+            <a class="new-entry-btn " href="#" title="Add new journal entry">
+                ➕ New Journal Entry
+            </a>
+        </nav>
+
     </body>
 </html>

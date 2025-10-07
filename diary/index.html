@@ -14,14 +14,70 @@
         <title>Homepage | Diary</title>
     </head>
     <body>
+        <!-- Set the navigation bar -->
         <nav class="site-navigation">
-            <a href="index.html" title="Go to homepage" class="site-navigation__homepage-link">
-                <img src="images/journal-logo.png" alt="Logo of a journal" class="homepage-link__logo">My Diary
-            </a>
-            <a class="new-entry-btn " href="#" title="Add new journal entry">
-                ➕ New Journal Entry
-            </a>
+            <!-- Create a container for the navigation bar -->
+            <div class="container">
+                <!-- Create a layout for the navigation bar -->
+                <div class="site-navigation-layout">
+                    <!-- Create logo and homepage link -->
+                    <a href="index.html"
+                       title="Go to homepage"
+                       class="site-navigation__homepage-link">
+                        <!-- Logo -->
+                        <img src="images/journal-logo.png"
+                             alt="Logo of a journal"
+                             class="homepage-link__logo"
+                        >
+                        My Diary
+                    </a>
+                    <!-- Create new entry button link -->
+                    <a class="new-entry-btn"
+                       href="#"
+                       title="Add new journal entry">
+                        ➕ New Journal Entry
+                    </a>
+                </div>
+            </div>
         </nav>
-
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Page title -->
+            <h1 class="page-title">Journal Entries</h1>
+            <!-- Contain the entry cards -->
+            <div class="container entries-container">
+                <!-- Section the entry cards -->
+                <div class="entry-card">
+                    <!-- Divide the entry card into 2 sections -->
+                    <!-- Section 1: Image container and image -->
+                    <div class="entry-card__image-container">
+                        <img src="images/elePHPant.jpg"
+                             alt="ElePHPant by Ben Griffiths on Unsplash"
+                             class="entry-card__image"
+                        >
+                    </div>
+                    <!-- Section 2: Entry card heading and content -->
+                    <section class="entry-card__content">
+                        <div class="entry-card__time">Week 01</div>
+                        <h2 class="entry-card__title">Title</h2>
+                        <hr>
+                        <p class="entry-card__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Asperiores at consequuntur deserunt doloremque eos eum ex facilis, fugit impedit modi
+                            molestias nobis numquam odit possimus quae quam recusandae vel voluptatem!</p>
+                        <p class="entry-card__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Asperiores at consequuntur deserunt doloremque eos eum ex facilis, fugit impedit modi
+                            molestias nobis numquam odit possimus quae quam recusandae vel voluptatem!</p>
+                    </section>
+                </div>
+                <div class="entry-card">
+                    <div class="entry-card__image-container">
+                        <img src="images/office.jpg"
+                             alt="Office photo by Nathan da Silva on Unsplash"
+                             class="entry-card__image"
+                        >
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

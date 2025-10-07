@@ -24,15 +24,19 @@ a {
 
 /* Style the navigation bar */
 .site-navigation {
+    padding: 10px;
+    background-color: #212d22;
+    font-size: 1.4rem;
+}
+
+/* Style the layout of the navigation bar */
+.site-navigation-layout {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #212d22;
     row-gap: 10px;
-    font-size: 1.4rem;
-    position: sticky;
+    width: 100%;
 }
 
 /* Style the homepage link */
@@ -68,6 +72,7 @@ a {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    transition: all 0.2s ease;
 }
 
 /* Style colour of the entry button link */
@@ -87,7 +92,70 @@ a {
     border: 4px inset #BEAD9B;
 }
 
+/* ------------------ Main Content Styles ------------------ */
 
+.main-content {
+    padding: 0 10px;
+}
+
+/* Style the page title */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* Style the entry container */
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Style the entry card */
+.entry-card {
+    background-color: #edebe9;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+    row-gap: 20px;
+    overflow: hidden;
+}
+
+/* Style the entry card content */
+.entry-card__content {
+    padding: 10px;
+    color: #75314a;
+}
+
+/* Style the entry card time stamp */
+.entry-card__time {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Style the entry card heading */
+.entry-card__title {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    letter-spacing: 0.03em;
+}
+
+/* Style the horizontal rule */
+hr {
+    border: 2px solid #311914;
+}
+
+/* Style the entry card image */
+.entry-card__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
 
 
 

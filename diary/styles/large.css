@@ -6,7 +6,6 @@
 
     /* Style the navigation bar */
     .site-navigation {
-        justify-content: space-around;
         padding: 10px 0;
         font-size: 1rem;
     }
@@ -16,5 +15,21 @@
         cursor: pointer;
         border-radius: 5px;
     }
-}
 
+    /* ------------------ Main Content Styles ------------------ */
+
+    /* Style the page title */
+    .page-title {
+        font-size: 3.5rem;
+    }
+
+    /* Style the entry card container */
+    .container {
+        max-width: 80%;
+    }
+
+    /* Style the entry card heading */
+    .entry-card__title {
+        font-size: 2.5rem;
+    }
+}

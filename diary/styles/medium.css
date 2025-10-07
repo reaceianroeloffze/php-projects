@@ -6,9 +6,55 @@
 
     /* Style the navigation bar */
     .site-navigation {
-        justify-content: space-between;
         padding: 10px;
-        flex-direction: row;
-        height: 5rem;
+        background-color: #212d22;
+        font-size: 1.4rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
+
+    /* Style the layout of the navigation bar */
+    .site-navigation-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /* ------------------ Main Content Styles ------------------ */
+
+    /* Style the main content container */
+    .main-content {
+        padding: 0;
+    }
+
+    /* Style the page title */
+    .page-title {
+        font-size: 3rem;
+    }
+
+    /* Style the entry card container */
+    .container {
+        width: 90%
+    }
+
+    /* Style the entry card */
+    .entry-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Style the entry card content */
+    .entry-card__content {
+        padding: 20px;
+    }
+
+    /* Style the entry card heading */
+    .entry-card__title {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
 }

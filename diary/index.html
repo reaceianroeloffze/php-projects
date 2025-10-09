@@ -59,14 +59,18 @@
                     <!-- Section 2: Entry card heading and content -->
                     <section class="entry-card__content">
                         <div class="entry-card__time">Week 01</div>
-                        <h2 class="entry-card__title">Title</h2>
-                        <hr>
-                        <p class="entry-card__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Asperiores at consequuntur deserunt doloremque eos eum ex facilis, fugit impedit modi
-                            molestias nobis numquam odit possimus quae quam recusandae vel voluptatem!</p>
-                        <p class="entry-card__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Asperiores at consequuntur deserunt doloremque eos eum ex facilis, fugit impedit modi
-                            molestias nobis numquam odit possimus quae quam recusandae vel voluptatem!</p>
+                        <h2 class="entry-card__title">What is PHP?</h2>
+                        <p class="entry-card__paragraph">
+                            PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely used open source
+                            general-purpose scripting language that is especially suited for web development and can be
+                            embedded into HTML.
+                        </p>
+                        <p class="entry-card__paragraph">
+                            Instead of lots of commands to output HTML (as seen in C or Perl), PHP pages contain HTML
+                            with embedded code that does something (in this case, output Hi, I'm a PHP script!). The PHP
+                            code is enclosed in special start and end processing instructions <?php and ?> that allow
+                            jumping in and out of PHP mode.
+                        </p>
                     </section>
                 </div>
                 <div class="entry-card">
@@ -78,6 +82,36 @@
                     </div>
                 </div>
             </div>
+            <!-- Add pagination -->
+            <ul class="pagination">
+                <!-- Add the left and right arrows -->
+                <!-- Left arrow - previous page -->
+                <li class="pagination__page-link pagination__left-arrow--previous-page">
+                    <a href="#">&lt;</a>
+                </li>
+                <!-- Left arrow - return to the first page -->
+                <li class="pagination__page-link pagination__left-arrow--first-page">
+                    <a href="#">&ll;</a>
+                </li>
+                <!-- Page numbers -->
+                <li class="pagination__page-link pagination__page-number">
+                    <a href="#">1</a>
+                </li>
+                <li class="pagination__page-link pagination__page-number">
+                    <a href="#">2</a>
+                </li>
+                <li class="pagination__page-link pagination__page-number">
+                    <a href="#">3</a>
+                </li>
+                <!-- Right arrow - next page -->
+                <li class="pagination__page-link pagination__right-arrow--next-page">
+                    <a href="#">&gt;</a>
+                </li>
+                <!-- Right arrow - Jump to the last page -->
+                <li class="pagination__page-link pagination__right-arrow--final-page">
+                    <a href="#">&gg;</a>
+                </li>
+            </ul>
         </main>
     </body>
 </html>

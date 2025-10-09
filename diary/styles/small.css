@@ -94,6 +94,7 @@ a {
 
 /* ------------------ Main Content Styles ------------------ */
 
+/* Style the main content container */
 .main-content {
     padding: 0 10px;
 }
@@ -118,6 +119,8 @@ a {
 
 /* Style the entry card */
 .entry-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
     background-color: #edebe9;
     border-radius: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
@@ -128,7 +131,7 @@ a {
 
 /* Style the entry card content */
 .entry-card__content {
-    padding: 10px;
+    padding: 0 20px 0 20px;
     color: #75314a;
 }
 
@@ -145,6 +148,17 @@ a {
     letter-spacing: 0.03em;
 }
 
+/* Add a horizontal rule after the title of each entry */
+.entry-card__title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    /* height: 2px; */
+    background-color: #75314a;
+    margin-top: 10px;
+    padding: 2px;
+}
+
 /* Style the horizontal rule */
 hr {
     border: 2px solid #311914;
@@ -154,7 +168,17 @@ hr {
 .entry-card__image {
     display: block;
     width: 100%;
+    height: auto;
+    min-height: 100%;
     object-fit: cover;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Style the entry card paragraph */
+.entry-card__paragraph {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 

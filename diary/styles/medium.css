@@ -42,8 +42,9 @@
 
     /* Style the entry card */
     .entry-card {
-        display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        justify-content: space-between;
     }
 
     /* Style the entry card content */
@@ -55,6 +56,16 @@
     .entry-card__title {
         font-size: 2rem;
         padding-left: 0;
+    }
+
+    /* Style the entry card image */
+    .entry-card__image {
+        box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style the entry card paragraph */
+    .entry-card__paragraph {
+
     }
 
 }

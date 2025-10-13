@@ -23,7 +23,8 @@
                     <!-- Create logo and homepage link -->
                     <a href="index.html"
                        title="Go to homepage"
-                       class="site-navigation__homepage-link">
+                       class="site-navigation__homepage-link"
+                    >
                         <!-- Logo -->
                         <img src="images/journal-logo.png"
                              alt="Logo of a journal"
@@ -34,7 +35,8 @@
                     <!-- Create new entry button link -->
                     <a class="new-entry-btn"
                        href="#"
-                       title="Add new journal entry">
+                       title="Add new journal entry"
+                    >
                         ➕ New Journal Entry
                     </a>
                 </div>
@@ -58,8 +60,11 @@
                     </div>
                     <!-- Section 2: Entry card heading and content -->
                     <section class="entry-card__content">
+                        <!-- Time stamp -->
                         <div class="entry-card__time">Week 01</div>
+                        <!-- Entry Title -->
                         <h2 class="entry-card__title">What is PHP?</h2>
+                        <!-- Entry paragraph(s) -->
                         <p class="entry-card__paragraph">
                             PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely used open source
                             general-purpose scripting language that is especially suited for web development and can be
@@ -73,6 +78,7 @@
                         </p>
                     </section>
                 </div>
+                <!-- Subsequent entry cards -->
                 <div class="entry-card">
                     <div class="entry-card__image-container">
                         <img src="images/office.jpg"
@@ -84,32 +90,48 @@
             </div>
             <!-- Add pagination -->
             <ul class="pagination">
-                <!-- Add the left and right arrows -->
-                <!-- Left arrow - previous page -->
-                <li class="pagination__page-link pagination__left-arrow--previous-page">
-                    <a href="#">&lt;</a>
+                <!-- Page jump left arrow -->
+                <li class="pagination__page-item pagination__page-jump-left-arrow">
+                    <a href="#" class="pagination__page-link">&Ll;</a>
                 </li>
-                <!-- Left arrow - return to the first page -->
-                <li class="pagination__page-link pagination__left-arrow--first-page">
-                    <a href="#">&ll;</a>
+                <!-- First page arrow -->
+                <li class="pagination__page-item pagination__first-page-arrow">
+                    <a href="#" class="pagination__page-link">&ll;</a>
+                </li>
+                <!-- Previous page arrow -->
+                <li class="pagination__page-item pagination__previous-page-arrow">
+                    <a href="#" class="pagination__page-link">&lt;</a>
                 </li>
                 <!-- Page numbers -->
-                <li class="pagination__page-link pagination__page-number">
-                    <a href="#">1</a>
+                <li class="pagination__page-item">
+                    <a href="#" class="pagination__page-link">1</a>
                 </li>
-                <li class="pagination__page-link pagination__page-number">
-                    <a href="#">2</a>
+                <li class="pagination__page-item">
+                    <a href="#" class="pagination__page-link">2</a>
                 </li>
-                <li class="pagination__page-link pagination__page-number">
-                    <a href="#">3</a>
+                <li class="pagination__page-item">
+                    <a href="#" class="pagination__page-link">3</a>
                 </li>
-                <!-- Right arrow - next page -->
-                <li class="pagination__page-link pagination__right-arrow--next-page">
-                    <a href="#">&gt;</a>
+                <li class="pagination__page-item">
+                    <a href="#" class="pagination__page-link">4</a>
                 </li>
-                <!-- Right arrow - Jump to the last page -->
-                <li class="pagination__page-link pagination__right-arrow--final-page">
-                    <a href="#">&gg;</a>
+                <li class="pagination__page-item">
+                    <a href="#" class="pagination__page-link">5</a>
+                </li>
+                <li class="pagination__page-item">
+                    <a href="#" class="pagination__page-link">6</a>
+                </li>
+                <!-- Next page arrow -->
+                <li class="pagination__page-item pagination__next-page-arrow">
+                    <a href="#" class="pagination__page-link">&gt;</a>
+                </li>
+                <!-- Last page arrow -->
+                <li class="pagination__page-item pagination__last-page-arrow">
+                    <a href="#" class="pagination__page-link">&gg;</a>
+                </li>
+                <!-- Page jump right arrow -->
+                <li class="pagination__page-item pagination__page-jump-right-arrow">
+                    <a href="#" class="pagination__page-link">&Gg;</a>
                 </li>
             </ul>
         </main>

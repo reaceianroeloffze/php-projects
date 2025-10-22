@@ -97,6 +97,33 @@ a {
 /* Style the main content container */
 .main-content {
     padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add svg file before and after the main content */
+.main-content::before,
+.main-content::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1rem;
+    bottom: -1rem;
+    z-index: -1;
+    width: 10rem;
+    background-image: url('../images/bg-lines.svg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-content::before {
+    left: 0;
+}
+
+.main-content::after {
+    right: 0;
+    transform: rotate(180deg);
 }
 
 /* Style the page title */
@@ -105,6 +132,8 @@ a {
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    margin-top: 0;
+    padding-top: 0.67em;
 }
 
 /* Style the entry container */
@@ -159,11 +188,6 @@ a {
     padding: 2px;
 }
 
-/* Style the horizontal rule */
-hr {
-    border: 2px solid #311914;
-}
-
 /* Style the entry card image */
 .entry-card__image {
     display: block;
@@ -179,6 +203,33 @@ hr {
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.5;
+}
+
+/* Style the pagination list */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 10px 0 25px 0;
+    font-size: 1.3rem;
+}
+
+/* Style the page links when hovered */
+.pagination__page-link:hover {
+    color: #DAA360;
+    text-decoration: underline;
+}
+
+/* Style the active page link */
+
+
+/* Style the page link when clicked */
+.pagination__page-link:active {
+    color: #311914;
 }
 
 

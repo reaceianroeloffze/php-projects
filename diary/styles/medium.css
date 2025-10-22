@@ -22,7 +22,6 @@
         align-items: center;
     }
 
-
     /* ------------------ Main Content Styles ------------------ */
 
     /* Style the main content container */
@@ -65,7 +64,13 @@
 
     /* Style the entry card paragraph */
     .entry-card__paragraph {
+    }
 
+    /* Style the pagination list */
+    .pagination {
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.5rem;
     }
 
 }

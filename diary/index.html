@@ -26,7 +26,7 @@
                        class="site-navigation__homepage-link"
                     >
                         <!-- Logo -->
-                        <img src="images/journal-logo.png"
+                        <img src="images/journal-logo.svg"
                              alt="Logo of a journal"
                              class="homepage-link__logo"
                         >
@@ -90,15 +90,15 @@
                 <!-- Add pagination -->
                 <ul class="pagination">
                     <!-- Page jump left arrow -->
-                    <li class="pagination__page-item pagination__page-jump-left-arrow">
+                    <li class="pagination__page-item--page-jump-left-arrow">
                         <a href="#" class="pagination__page-link">&Ll;</a>
                     </li>
                     <!-- First page arrow -->
-                    <li class="pagination__page-item pagination__first-page-arrow">
+                    <li class="pagination__page-item--first-page-arrow">
                         <a href="#" class="pagination__page-link">&ll;</a>
                     </li>
                     <!-- Previous page arrow -->
-                    <li class="pagination__page-item pagination__previous-page-arrow">
+                    <li class="pagination__page-item--previous-page-arrow">
                         <a href="#" class="pagination__page-link">&lt;</a>
                     </li>
                     <!-- Page numbers -->
@@ -121,19 +121,26 @@
                         <a href="#" class="pagination__page-link">6</a>
                     </li>
                     <!-- Next page arrow -->
-                    <li class="pagination__page-item pagination__next-page-arrow">
+                    <li class="pagination__page-item--next-page-arrow">
                         <a href="#" class="pagination__page-link">&gt;</a>
                     </li>
                     <!-- Last page arrow -->
-                    <li class="pagination__page-item pagination__last-page-arrow">
+                    <li class="pagination__page-item--last-page-arrow">
                         <a href="#" class="pagination__page-link">&gg;</a>
                     </li>
                     <!-- Page jump right arrow -->
-                    <li class="pagination__page-item pagination__page-jump-right-arrow">
+                    <li class="pagination__page-item--page-jump-right-arrow">
                         <a href="#" class="pagination__page-link">&Gg;</a>
                     </li>
                 </ul>
             </div>
         </main>
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <h3 class="site-footer__heading">My Person PHP Diary</h3>
+            <p class="footer__last-updated">
+                Last updated: <span class="last-updated__year"></span>
+            </p>
+        </footer>
     </body>
 </html>

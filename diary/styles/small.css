@@ -63,8 +63,8 @@ a {
     border-radius: 5%;
 }
 
-/* Style the new entry button */
-.new-entry-btn {
+/* Style all site buttons */
+.site-btn {
     background-color: #fcdb63;
     border: 4px outset #8ea2bb;
     color: #311914;
@@ -72,6 +72,7 @@ a {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    font-weight: bold;
     transition: all 0.2s ease;
 }
 
@@ -81,12 +82,12 @@ a {
 }
 
 /* Button hover effect */
-.new-entry-btn:hover {
+.site-btn:hover {
     background-color: #fcd5bb;
 }
 
 /* Button active effect */
-.new-entry-btn:active {
+.site-btn:active {
     background-color: #311914;
     color: #fcd5bb;
     border: 4px inset #8ea2bb;
@@ -115,6 +116,7 @@ a {
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100rem;
 }
 
 .main-content::before {
@@ -239,6 +241,11 @@ a {
 
 /* --------------------- Form Page Styles ------------------ */
 
+/* Style the form container */
+.container--form {
+    row-gap: 0;
+}
+
 /* Style the form */
 .site-form {
     width: 100%;
@@ -247,19 +254,9 @@ a {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-}
-
-/* Style the fieldset */
-.site-form__fieldset {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    border-radius: 10px;
-    padding: 10px;
 }
 
 /* Style the legend */
@@ -272,6 +269,7 @@ a {
 /* Style the legend heading */
 .site-form__heading {
     margin: 0;
+    letter-spacing: 0.05em;
 }
 
 /* Style the form labels */
@@ -302,27 +300,7 @@ a {
 /* Style the submit button */
 .site-form__submit-btn {
     align-self: center;
-    background-color: #fcdb63;
-    color: #311914;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 4px outset #8ea2bb;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
     width: 100%;
-}
-
-/* Style the submit button when hovered */
-.site-form__submit-btn:hover {
-    background-color: #fcd5bb;
-}
-
-/* Style the submit button when clicked */
-.site-form__submit-btn:active {
-    background-color: #311914;
-    color: #fcd5bb;
-    border: 4px inset #8ea2bb;
 }
 
 /* -------------------- Footer Styles ------------------ */

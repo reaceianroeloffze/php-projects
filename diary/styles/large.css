@@ -23,11 +23,17 @@
         font-size: 3.5rem;
     }
 
+    /* Style the main content container */
+    .main-content {
+        padding: 0 0 30px 0;
+    }
+
     /* ------------------ Homepage Styles ------------------ */
 
     /* Style the entry card container */
     .container {
-        max-width: 80%;
+        width: 80%;
+        max-width: 1400px;
     }
 
     /* Style the entry card heading */

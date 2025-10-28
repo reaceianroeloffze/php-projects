@@ -65,8 +65,8 @@ a {
 
 /* Style the new entry button */
 .new-entry-btn {
-    background-color: #DAA360;
-    border: 4px outset #BEAD9B;
+    background-color: #fcdb63;
+    border: 4px outset #8ea2bb;
     color: #311914;
     padding: 10px 20px;
     cursor: pointer;
@@ -77,26 +77,26 @@ a {
 
 /* Style colour of the entry button link */
 .new-entry-btn__btn-link {
-    color: #311914;
+    color: #8ea2bb;
 }
 
 /* Button hover effect */
 .new-entry-btn:hover {
-    background-color: #c88b44;
+    background-color: #fcd5bb;
 }
 
 /* Button active effect */
 .new-entry-btn:active {
     background-color: #311914;
-    color: #DAA360;
-    border: 4px inset #BEAD9B;
+    color: #fcd5bb;
+    border: 4px inset #8ea2bb;
 }
 
 /* ------------------ Main Content Styles ------------------ */
 
 /* Style the main content container */
 .main-content {
-    padding: 0 10px;
+    padding: 0 10px 30px 10px;
     position: relative;
     overflow: hidden;
 }
@@ -136,7 +136,7 @@ a {
     padding-top: 0.67em;
 }
 
-/* Style the entry container */
+/* Style the content container */
 .container {
     display: flex;
     flex-direction: column;
@@ -145,6 +145,8 @@ a {
     width: 95%;
     margin: 0 auto;
 }
+
+/* ------------------ Homepage Styles ------------------ */
 
 /* Style the entry card */
 .entry-card {
@@ -220,16 +222,107 @@ a {
 
 /* Style the page links when hovered */
 .pagination__page-link:hover {
-    color: #DAA360;
+    color: #99C5FF;
     text-decoration: underline;
 }
 
-/* Style the active page link */
+/* Style the page link when clicked */
+.pagination__page-link:active {
+    color: #311914;
+}
 
 
 /* Style the page link when clicked */
 .pagination__page-link:active {
     color: #311914;
+}
+
+/* --------------------- Form Page Styles ------------------ */
+
+/* Style the form */
+.site-form {
+    width: 100%;
+    max-width: 100%;
+    background-color: #CADEFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Style the fieldset */
+.site-form__fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Style the legend */
+.site-form__legend {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the legend heading */
+.site-form__heading {
+    margin: 0;
+}
+
+/* Style the form labels */
+.site-form__label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style the form input fields */
+.site-form__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the textarea */
+.site-form__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+
+/* Style the submit button */
+.site-form__submit-btn {
+    align-self: center;
+    background-color: #fcdb63;
+    color: #311914;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 4px outset #8ea2bb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+/* Style the submit button when hovered */
+.site-form__submit-btn:hover {
+    background-color: #fcd5bb;
+}
+
+/* Style the submit button when clicked */
+.site-form__submit-btn:active {
+    background-color: #311914;
+    color: #fcd5bb;
+    border: 4px inset #8ea2bb;
 }
 
 /* -------------------- Footer Styles ------------------ */

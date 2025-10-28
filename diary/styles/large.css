@@ -23,6 +23,8 @@
         font-size: 3.5rem;
     }
 
+    /* ------------------ Homepage Styles ------------------ */
+
     /* Style the entry card container */
     .container {
         max-width: 80%;
@@ -36,6 +38,19 @@
     /* Style the pagination list */
     .pagination {
         font-size: 1.5rem;
+    }
+
+    /* ------------------ Form page Styles ------------------ */
+
+    /* Style the form */
+    .site-form {
+        width: 60%;
+        max-width: 60%;
+    }
+
+    /* Style the submit button */
+    .site-form__submit-btn {
+        width: 50%;
     }
 
 }

@@ -43,8 +43,26 @@
             </div>
         </nav>
         <!-- Main content -->
-        <main class="main-content">
-
+        <main class="main-content main-content--form">
+            <div class="container">
+                <h1 class="page-title">New Journal Entry</h1>
+                <form method="POST" action="form.html" class="site-form">
+                    <fieldset class="site-form__fieldset">
+                        <legend class="site-form__legend">
+                            <h2 class="site-form__heading">Create Entry</h2>
+                        </legend>
+                        <label>Title:
+                            <input type="text" class="site-form__input" name="title">
+                        </label>
+                        <label>Date:
+                            <input type="date" class="site-form__input" name="date">
+                        </label>
+                        <label class="site-form__label">What's on your mind?
+                            <textarea name="content" cols="30" rows="10" class="site-form__textarea"></textarea>
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
         </main>
         <!-- Site footer -->
         <footer class="site-footer">

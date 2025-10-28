@@ -1,0 +1,356 @@
+/* General site and mobile screen styles */
+
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Russo+One&display=swap');
+
+/* ------------------ Across all devices ------------------ */
+
+/* Font for the entire site */
+html {
+    font-family: 'Aldrich', sans-serif;
+}
+
+/* Font for all site headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Russo One', sans-serif;
+}
+
+/* Remove text decoration from all links */
+a {
+    text-decoration: none;
+}
+
+/* ------------------ Header/Nav Styles ------------------ */
+
+/* Style the navigation bar */
+.site-navigation {
+    padding: 10px;
+    background-color: #212d22;
+    font-size: 1.4rem;
+}
+
+/* Style the layout of the navigation bar */
+.site-navigation-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+    width: 100%;
+}
+
+/* Style the homepage link */
+.site-navigation__homepage-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #f4f0ec;
+}
+
+/* Homepage link hover effect */
+.site-navigation__homepage-link:hover {
+    text-decoration: underline;
+}
+
+/* Homepage link active effect */
+.site-navigation__homepage-link:active {
+    color: #DAA360;
+}
+
+/* Style the logo */
+.homepage-link__logo {
+    width: 3.5rem;
+    border-radius: 5%;
+}
+
+/* Style all site buttons */
+.site-btn {
+    background-color: #fcdb63;
+    border: 4px outset #8ea2bb;
+    color: #311914;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+/* Style colour of the entry button link */
+.new-entry-btn__btn-link {
+    color: #8ea2bb;
+}
+
+/* Button hover effect */
+.site-btn:hover {
+    background-color: #fcd5bb;
+}
+
+/* Button active effect */
+.site-btn:active {
+    background-color: #311914;
+    color: #fcd5bb;
+    border: 4px inset #8ea2bb;
+}
+
+/* ------------------ Main Content Styles ------------------ */
+
+/* Style the main content container */
+.main-content {
+    padding: 0 10px 30px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add svg file before and after the main content */
+.main-content::before,
+.main-content::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1rem;
+    bottom: -1rem;
+    z-index: -1;
+    width: 10rem;
+    background-image: url('../images/bg-lines.svg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100rem;
+}
+
+.main-content::before {
+    left: 0;
+}
+
+.main-content::after {
+    right: 0;
+    transform: rotate(180deg);
+}
+
+/* Style the page title */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 0;
+    padding-top: 0.67em;
+}
+
+/* Style the content container */
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* ------------------ Homepage Styles ------------------ */
+
+/* Style the entry card */
+.entry-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: #edebe9;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+    row-gap: 20px;
+    overflow: hidden;
+}
+
+/* Style the entry card content */
+.entry-card__content {
+    padding: 0 20px 0 20px;
+    color: #75314a;
+}
+
+/* Style the entry card time stamp */
+.entry-card__time {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Style the entry card heading */
+.entry-card__title {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    letter-spacing: 0.03em;
+}
+
+/* Add a horizontal rule after the title of each entry */
+.entry-card__title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    /* height: 2px; */
+    background-color: #75314a;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+/* Style the entry card image */
+.entry-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Style the entry card paragraph */
+.entry-card__paragraph {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Style the pagination list */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 10px 0 25px 0;
+    font-size: 1.3rem;
+}
+
+/* Style the page links when hovered */
+.pagination__page-link:hover {
+    color: #99C5FF;
+    text-decoration: underline;
+}
+
+/* Style the page link when clicked */
+.pagination__page-link:active {
+    color: #311914;
+}
+
+
+/* Style the page link when clicked */
+.pagination__page-link:active {
+    color: #311914;
+}
+
+/* --------------------- Form Page Styles ------------------ */
+
+/* Style the form container */
+.container--form {
+    row-gap: 0;
+}
+
+/* Style the form */
+.site-form {
+    width: 100%;
+    max-width: 100%;
+    background-color: #CADEFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Style the legend */
+.site-form__legend {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the legend heading */
+.site-form__heading {
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+/* Style the form labels */
+.site-form__label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style the form input fields */
+.site-form__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the textarea */
+.site-form__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+
+/* Style the submit button */
+.site-form__submit-btn {
+    align-self: center;
+    width: 100%;
+}
+
+/* -------------------- Footer Styles ------------------ */
+
+/* General footer styles */
+.site-footer {
+    background-color: #212d22;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the footer container */
+.site-footer__container {
+    align-content: space-around;
+    row-gap: 0;
+}
+
+/* Style the footer heading */
+.site-footer__heading {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    color: #f4f0ec;
+}
+
+/* Style the footer paragraph */
+.site-footer__description {
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.site-footer__description,
+.site-footer__last-updated {
+    font-size: 1.2rem;
+    color: #f4f0ec;
+}
+
+/* Add a pseudo element after the last updated paragraph */
+
+.site-footer__last-updated::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f4f0ec;
+    margin-top: 30px;
+    padding: 1px;
+}
+
+
+
+
+
+

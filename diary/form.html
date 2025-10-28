@@ -51,16 +51,18 @@
                         <legend class="site-form__legend">
                             <h2 class="site-form__heading">Create Entry</h2>
                         </legend>
-                        <label>Title:
-                            <input type="text" class="site-form__input" name="title">
+                        <label class="site-form__label">Entry Title:
+                            <input type="text" class="site-form__input" name="title" title="Title of your new journal entry">
                         </label>
-                        <label>Date:
-                            <input type="date" class="site-form__input" name="date">
+                        <label class="site-form__label">Entry Date:
+                            <input type="date" class="site-form__input" name="date" title="Date of your new journal entry">
                         </label>
                         <label class="site-form__label">What's on your mind?
-                            <textarea name="content" cols="30" rows="10" class="site-form__textarea"></textarea>
+                            <textarea name="content" rows="10" class="site-form__textarea" title="Share whatever you like"></textarea>
                         </label>
                     </fieldset>
+                    <!-- Form submit button -->
+                    <button class="site-form__submit-btn" type="submit" title="Submit a new journal entry">Add New Journal Entry</button>
                 </form>
             </div>
         </main>

@@ -113,3 +113,74 @@ Stack trace:
 [30-Oct-2025 18:11:05 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
 [30-Oct-2025 18:11:19 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
 [30-Oct-2025 18:11:22 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[31-Oct-2025 10:53:49 Africa/Johannesburg] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function displayJournalEntries(), 1 passed in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 20 and exactly 2 expected in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:28
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 28
+[31-Oct-2025 10:54:04 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:46
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(46): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 46
+[31-Oct-2025 10:54:54 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 11 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:47
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(47): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 47
+[31-Oct-2025 10:55:23 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 11 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:47
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(47): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 47
+[31-Oct-2025 10:56:00 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 12 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:48
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(48): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 48
+[31-Oct-2025 10:56:20 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 12 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:48
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(48): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 48
+[31-Oct-2025 10:56:28 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 12 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:48
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(48): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 48
+[31-Oct-2025 10:59:17 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 10 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:46
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(46): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 46
+[31-Oct-2025 11:06:22 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3, 3' at line 10 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:46
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(46): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 46
+[31-Oct-2025 11:06:49 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3, 3' at line 10 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:46
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(46): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 46
+[31-Oct-2025 11:10:13 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 12 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:48
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(48): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 48
+[31-Oct-2025 11:11:38 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-3' at line 12 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:48
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(48): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php(20): displayJournalEntries(3, -3)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 48

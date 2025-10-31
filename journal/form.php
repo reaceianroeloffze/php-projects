@@ -20,9 +20,9 @@
     
     if ($action === 'submit-entry') {
         // Filter and store the form input data
-        $title = (string) trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '';
-        $created_on = (string) trim(filter_input(INPUT_POST, 'created_on', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '';
-        $body = (string) trim(filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '';
+        $title = (string) (trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
+        $created_on = (string) (trim(filter_input(INPUT_POST, 'created_on', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
+        $body = (string) (trim(filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
 
         // Check if the form was submitted
         if (!empty($title) && !empty($created_on) && !empty($body)) {

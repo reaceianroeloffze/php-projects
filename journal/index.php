@@ -10,8 +10,22 @@
     // Define how many entries to display per page
     $entriesPerPage = 3;
 
+    // Get the current page number from the URL, default to 1 if not set
+    $currentPage = (INT) (filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT) ?? 1);
+
+    // Calculate the offest for the SQL LIMIT clause
+    //How pagination works
+    $offset = ($currentPage - 1) * $entriesPerPage;
+
     // Retrieve the journal entries from the database/model file
-    $journalEntries = displayJournalEntries($entriesPerPage);
+    $journalEntries = displayJournalEntries($entriesPerPage, $offset);
+
+    // Get the total number of journal entries for pagination
+    $entryCount = countAllJournalEntries();
+
+    echo '<pre>';
+    print_r($entryCount);
+    echo '</pre>';
     
     /* echo '<pre>';
     print_r($journalEntries);

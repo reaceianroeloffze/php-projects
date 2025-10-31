@@ -1,0 +1,74 @@
+root = true
+
+[*]
+# Indentation
+indent_style = space
+indent_size = tab
+
+[*{.php,.js,.mjs,.ts,.css,.html}]
+# Comments
+ij_any_line_comment_add_space = true
+ij_any_block_comment_add_space = true
+ij_any_block_comment_at_first_column = false
+# Braces for all files
+ij_any_block_brace_style = end_of_line
+ij_any_class_brace_style = next_line
+ij_any_lambda_brace_style = end_of_line
+ij_any_method_brace_style = end_of_line
+# Spaces for all files
+ij_any_spaces_within_array_initializer_braces = false
+ij_any_space_after_for_semicolon = true
+ij_any_space_after_colon = true
+ij_any_space_after_comma = true
+ij_any_space_before_array_initializer_left_brace = true
+ij_any_space_before_catch_left_brace = true
+ij_any_space_before_class_left_brace = true
+ij_any_space_before_do_left_brace = true
+ij_any_space_before_else_left_brace = true
+ij_any_space_before_finally_left_brace = true
+ij_any_space_before_for_left_brace = true
+ij_any_space_before_if_left_brace = true
+ij_any_space_before_method_left_brace = true
+ij_any_space_before_switch_left_brace = true
+ij_any_space_before_try_left_brace = true
+ij_any_space_before_while_left_brace = true
+ij_any_space_before_catch_keyword = true
+ij_any_space_before_else_keyword = true
+# else if
+ij_any_special_else_if_treatment = true
+# Alignment
+ij_any_align_group_field_declarations = true
+ij_any_align_multiline_array_initializer_expression = true
+ij_any_align_multiline_extends_list = true
+ij_any_align_multiline_binary_operation = true
+ij_any_align_multiline_chained_methods = true
+ij_any_align_multiline_for = true
+ij_any_align_multiline_parameters = true
+ij_any_align_multiline_parameters_in_calls = true
+ij_any_align_multiline_ternary_operation = true
+
+[*.html]
+ij_html_align_attributes = true
+ij_html_align_text = true
+ij_html_block_comment_add_space = true
+ij_html_inline_tags = unset
+ij_html_new_line_after_last_attribute = when_multiline
+ij_html_do_not_indent_children_of_tags = unset
+
+
+[*.php]
+# php tags
+ij_php_indent_code_in_php_tags = true
+ij_php_spaces_within_short_echo_tags = true
+ij_php_phpdoc_blank_line_before_tags = true
+# alignment
+ij_php_align_assignments = true
+# PHP constants
+ij_php_upper_case_null_const = true
+ij_php_upper_case_boolean_const = true
+# else if
+ij_php_else_if_style = separate
+
+
+
+

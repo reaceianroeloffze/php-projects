@@ -1,1 +1,115 @@
 [28-Oct-2025 19:37:11 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected identifier "htmlspecialchars" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 76
+[29-Oct-2025 15:31:11 Africa/Johannesburg] PHP Warning:  Undefined array key "content" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 37
+[29-Oct-2025 15:39:17 Africa/Johannesburg] PHP Warning:  Undefined array key "date" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 34
+[29-Oct-2025 15:39:38 Africa/Johannesburg] PHP Warning:  Undefined array key "entry_date" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 34
+[29-Oct-2025 17:09:18 Africa/Johannesburg] PHP Warning:  Undefined array key "body" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 12
+[29-Oct-2025 17:09:18 Africa/Johannesburg] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 12
+[29-Oct-2025 17:09:42 Africa/Johannesburg] PHP Warning:  Undefined array key "body" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 13
+[29-Oct-2025 17:09:42 Africa/Johannesburg] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 13
+[30-Oct-2025 16:40:13 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 44
+[30-Oct-2025 16:41:05 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(17): insertNewJournalEntry('', '', '')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 16:47:43 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected token "else" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 25
+[30-Oct-2025 17:01:21 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:02:58 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:03:45 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:03:49 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:22:24 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 4
+[30-Oct-2025 17:22:24 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 4
+[30-Oct-2025 17:23:09 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 4
+[30-Oct-2025 17:23:09 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 4
+[30-Oct-2025 17:23:36 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:23:36 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:24:02 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:24:02 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:04 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:04 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:15 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:15 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:18 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:18 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:22 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:22 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:24 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:25:35 Africa/Johannesburg] PHP Warning:  require_once(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:35 Africa/Johannesburg] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journalmodel/journal-model.php' (include_path='.;C:\php\pear') in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 4
+[30-Oct-2025 17:25:57 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:27:01 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:27:05 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:27:15 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:28:05 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:30:25 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 11
+[30-Oct-2025 17:32:11 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(25): insertNewJournalEntry('Test', '', 'Lorem Ipsum')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 17:33:24 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(25): insertNewJournalEntry('Test', '', 'Lorem Ipsum')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 17:34:03 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(25): insertNewJournalEntry('Test', '', 'Lorem Ipsum')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 17:34:27 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(25): insertNewJournalEntry('Test', '', 'Lorem Ipsum')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 17:34:55 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(28): insertNewJournalEntry('Test', '', 'Lorem Ipsum')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 17:36:48 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[30-Oct-2025 17:39:26 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[30-Oct-2025 17:39:44 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:35
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(35): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(28): insertNewJournalEntry('Test', '', 'Lorem Ipsum')
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 35
+[30-Oct-2025 17:44:13 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[30-Oct-2025 18:10:28 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[30-Oct-2025 18:11:05 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[30-Oct-2025 18:11:19 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14
+[30-Oct-2025 18:11:22 Africa/Johannesburg] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 14

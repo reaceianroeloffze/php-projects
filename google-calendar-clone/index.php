@@ -62,7 +62,7 @@
                 <input class="form-input" type="date" name="start_date" required>
             </label>
             <!-- End Date -->
-            <label class="form-label start-date">End Date:<span class="required-ast">&#42;</span>
+            <label class="form-label end-date">End Date:<span class="required-ast">&#42;</span>
                 <input class="form-input" type="date" name="end_date" required>
             </label>
             <!-- Submit button -->

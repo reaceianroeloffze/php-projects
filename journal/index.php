@@ -1,11 +1,21 @@
 <?php
+    // Start a session
+    session_start();
 
-    /* include the required files and libraries */
-    require_once 'model/journal-model.php';
-    require_once 'library/functions.php';
-    require_once 'library/journal-db-connect.php';
+    // include the required files and libraries
+    require_once __DIR__ . '/model/journal-model.php';
+    require_once __DIR__ . '/library/functions.php';
+    require_once __DIR__ . '/library/journal-db-connect.php';
 
+    // Define how many entries to display per page
+    $entriesPerPage = 3;
 
+    // Retrieve the journal entries from the database/model file
+    $journalEntries = displayJournalEntries($entriesPerPage);
+    
+    /* echo '<pre>';
+    print_r($journalEntries);
+    echo '</pre>'; */
 ?>
 
     <!-- Include the header file -->
@@ -13,48 +23,36 @@
     <!-- Page title -->
     <h1 class="page-title">Journal Entries</h1>
     <!-- Contain the entry cards -->
+    <?php
+        if (isset($_SESSION['message'])) {
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+        }
+    ?>
     <div class="container entries-container">
         <!-- Section the entry cards -->
-        <div class="entry-card">
-            <!-- Divide the entry card into 2 sections -->
-            <!-- Section 1: Image container and image -->
-            <div class="entry-card__image-container">
-                <img src="images/elePHPant.jpg"
-                     alt="ElePHPant by Ben Griffiths on Unsplash"
-                     class="entry-card__image"
-                >
+        <?php foreach ($journalEntries as $journalEntry): ?>
+            <div class="entry-card">
+                <!-- Divide the entry card into 2 sections -->
+                <!-- Section 1: Image container and image -->
+                <div class="entry-card__image-container">
+                    <img src="images/elePHPant.jpg"
+                         alt="ElePHPant by Ben Griffiths on Unsplash"
+                         class="entry-card__image"
+                    >
+                </div>
+                <!-- Section 2: Entry card heading and content -->
+                <section class="entry-card__content">
+                    <!-- Time stamp -->
+                    <div class="entry-card__time"><?php echo e($journalEntry['created_on']) ?></div>
+                    <!-- Entry Title -->
+                    <h2 class="entry-card__title"><?php echo e($journalEntry['title']) ?></h2>
+                    <!-- Entry paragraph(s) -->
+                    <p class="entry-card__paragraph"><?php echo nl2br(e($journalEntry['body'])) ?></p>
+                </section>
             </div>
-            <!-- Section 2: Entry card heading and content -->
-            <section class="entry-card__content">
-                <!-- Time stamp -->
-                <div class="entry-card__time">Week 01</div>
-                <!-- Entry Title -->
-                <h2 class="entry-card__title">What is PHP?</h2>
-                <!-- Entry paragraph(s) -->
-                <p class="entry-card__paragraph">
-                    PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely used open source
-                    general-purpose scripting language that is especially suited for web development and can be
-                    embedded into HTML.
-                </p>
-                <p class="entry-card__paragraph">
-                    Instead of lots of commands to output HTML (as seen in C or Perl), PHP pages contain HTML
-                    with embedded code that does something (in this case, output Hi, I'm a PHP script!). The PHP
-                    code is enclosed in special start and end processing instructions <?php echo '<?php' . 'and ?>' ?>
-                    that
-                    allow
-                    jumping in and out of PHP mode.
-                </p>
-            </section>
-        </div>
+        <?php endforeach; ?>
         <!-- Subsequent entry cards -->
-        <div class="entry-card">
-            <div class="entry-card__image-container">
-                <img src="images/office.jpg"
-                     alt="Office photo by Nathan da Silva on Unsplash"
-                     class="entry-card__image"
-                >
-            </div>
-        </div>
         <!-- Add pagination -->
         <ul class="pagination">
             <!-- Page jump left arrow -->

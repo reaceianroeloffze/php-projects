@@ -13,7 +13,7 @@ const modalEl = document.querySelector('.modal');
 let currentDate = new Date();
 
 // Create a function to display the modal for adding an appointment
-const openAddModal = function (dateString) {
+const openAddModal = function(dateString) {
     document.querySelector('#form-action').value = 'add';
     document.querySelector('#eventId').value = '';
     document.querySelector('#deleteEventId').value = '';
@@ -35,7 +35,7 @@ const openAddModal = function (dateString) {
 }
 
 // Create a function to display the modal for editing an appointment
-const openEditModal = function (eventsOnDate) {
+const openEditModal = function(eventsOnDate) {
     document.querySelector('#form-action').value = 'edit';
     modalEl.style.display = 'flex';
 
@@ -58,7 +58,7 @@ const openEditModal = function (eventsOnDate) {
 }
 
 // Create a function to render the calendar
-const renderCalendar = function (date = new Date()) {
+const renderCalendar = function(date = new Date()) {
     calendarEl.innerHTML = '';
 
     // Get current year, current month, and current day
@@ -167,7 +167,7 @@ const renderCalendar = function (date = new Date()) {
 }
 
 // Create a function to populate the form based on the selected event
-const handleEventSelection = function (JSONEvent) {
+const handleEventSelection = function(JSONEvent) {
     const eventData = JSON.parse(JSONEvent);
 
     document.querySelector('#eventId').value = eventData.id;
@@ -182,11 +182,27 @@ const handleEventSelection = function (JSONEvent) {
     document.querySelector('.end-time').value = eventData.endTime || '';
 }
 
+// Create a function to close the modal window
+const closeModal = function() {
+    modalEl.style.display = 'none';
+}
 
+const changeMonth = function(offset) {
+    currentDate.setMonth(currentDate.getMonth() + offset);
+    renderCalendar(currentDate);
+}
 
+// Create a function to update a live clock
+const updateClock = function() {
+    const clockEl = document.querySelector('.clock-container__clock');
+    const date = new Date();
+    clockEl.textContent = date.toLocaleTimeString('en-GB', {hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false});
+}
 
-
-
+// Initialisation
+renderCalendar(currentDate);
+updateClock();
+setInterval(updateClock, 1000);
 
 
 

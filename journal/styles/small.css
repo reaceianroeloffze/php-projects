@@ -246,6 +246,14 @@ a {
     row-gap: 0;
 }
 
+/* Style the success/error message paragraphs */
+.success-message,
+.error-message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 /* Style the form */
 .site-form {
     width: 100%;

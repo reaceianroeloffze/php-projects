@@ -233,12 +233,6 @@ a {
     color: #311914;
 }
 
-
-/* Style the page link when clicked */
-.pagination__page-link:active {
-    color: #311914;
-}
-
 /* --------------------- Form Page Styles ------------------ */
 
 /* Style the form container */

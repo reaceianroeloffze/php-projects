@@ -23,9 +23,8 @@
     // Get the total number of journal entries for pagination
     $entryCount = countAllJournalEntries();
 
-    echo '<pre>';
-    print_r($entryCount);
-    echo '</pre>';
+    // Calculate the total number of pages based on the number of journal entries
+    $numPages = (INT) ceil($entryCount / $entriesPerPage);
     
     /* echo '<pre>';
     print_r($journalEntries);
@@ -67,52 +66,73 @@
             </div>
         <?php endforeach; ?>
         <!-- Subsequent entry cards -->
-        <!-- Add pagination -->
-        <ul class="pagination">
-            <!-- Page jump left arrow -->
-            <li class="pagination__page-item--page-jump-left-arrow">
-                <a href="#" class="pagination__page-link">&Ll;</a>
-            </li>
-            <!-- First page arrow -->
-            <li class="pagination__page-item--first-page-arrow">
-                <a href="#" class="pagination__page-link">&ll;</a>
-            </li>
-            <!-- Previous page arrow -->
-            <li class="pagination__page-item--previous-page-arrow">
-                <a href="#" class="pagination__page-link">&lt;</a>
-            </li>
-            <!-- Page numbers -->
-            <li class="pagination__page-item">
-                <a href="#" class="pagination__page-link">1</a>
-            </li>
-            <li class="pagination__page-item">
-                <a href="#" class="pagination__page-link">2</a>
-            </li>
-            <li class="pagination__page-item">
-                <a href="#" class="pagination__page-link">3</a>
-            </li>
-            <li class="pagination__page-item">
-                <a href="#" class="pagination__page-link">4</a>
-            </li>
-            <li class="pagination__page-item">
-                <a href="#" class="pagination__page-link">5</a>
-            </li>
-            <li class="pagination__page-item">
-                <a href="#" class="pagination__page-link">6</a>
-            </li>
-            <!-- Next page arrow -->
-            <li class="pagination__page-item--next-page-arrow">
-                <a href="#" class="pagination__page-link">&gt;</a>
-            </li>
-            <!-- Last page arrow -->
-            <li class="pagination__page-item--last-page-arrow">
-                <a href="#" class="pagination__page-link">&gg;</a>
-            </li>
-            <!-- Page jump right arrow -->
-            <li class="pagination__page-item--page-jump-right-arrow">
-                <a href="#" class="pagination__page-link">&Gg;</a>
-            </li>
-        </ul>
+        <!-- Add pagination if there is more than 1 page -->
+        <?php if ($numPages > 1): ?>
+            <ul class="pagination">
+                <!-- Display the left page arrows only when not on the first page -->
+                <?php if ($currentPage > 1): ?>
+                    <!-- Page jump left arrow -->
+                    <?php if ($numPages > 5): ?>
+                        <li class="pagination__page-item--page-jump-left-arrow">
+                            <a href="index.php?<?php echo http_build_query(['page' => $currentPage - 5]) ?>" class="pagination__page-link">&Ll;</a>
+                        </li>
+                    <?php endif; ?>
+                    <!-- First page arrow -->
+                    <li class="pagination__page-item--first-page-arrow">
+                        <a href="index.php?<?php echo http_build_query(['page' => 1]) ?>"
+                        class="pagination__page-link"
+                        >
+                        &ll;
+                        </a>
+                    </li>
+                    <!-- Previous page arrow -->
+                    <li class="pagination__page-item--previous-page-arrow">
+                        <a href="index.php?<?php echo http_build_query(['page' => $currentPage - 1]) ?>"
+                        class="pagination__page-link"
+                        >
+                            &lt;
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <!-- Page numbers -->
+                <?php for ($page = 1; $page <= $numPages; $page++): ?>
+                    <li class="pagination__page-item">
+                        <?php if ($page !== $currentPage): ?>
+                            <a href="index.php?<?php echo http_build_query(['page' => $page]) ?>"
+                            class="pagination__page-link"
+                            >
+                                <?php echo $page ?>
+                            </a>
+                        <?php else: ?>
+                            <span class="pagination__page-link--disabled">
+                                <?php echo $page ?>
+                            </span>
+                        <?php endif; ?>
+                    </li>
+                    <?php endfor; ?>
+                <!-- Only display the right page arrows when not on the last page -->
+                <?php if ($currentPage < $numPages): ?>
+                    <!-- Next page arrow -->
+                    <li class="pagination__page-item--next-page-arrow">
+                        <a href="index.php?<?php echo http_build_query(['page' => $currentPage + 1]) ?>" class="pagination__page-link">&gt;</a>
+                    </li>
+                    <!-- Last page arrow -->
+                    <li class="pagination__page-item--last-page-arrow">
+                        <a href="index.php?<?php echo http_build_query(['page' => $numPages]) ?>" class="pagination__page-link">&gg;</a>
+                    </li>
+                    <!-- Page jump right arrow -->
+                    <?php if ($numPages > 5): ?>
+                        <li class="pagination__page-item--page-jump-right-arrow">
+                            <a href="index.php?<?php echo http_build_query(['page' => $currentPage + 5]) ?>"
+                               class="pagination__page-link"
+                            >
+                               &Gg;
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </ul>
+        <?php endif; ?>
     </div>
     <!-- Include the footer file -->
 <?php include 'inc/footer.inc.php'; ?>

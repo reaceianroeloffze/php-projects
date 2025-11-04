@@ -1,11 +1,18 @@
 <?php
     // Start a session
     session_start();
-
+    /* 
+    echo '<pre>';
+    print_r($_SESSION);
+    echo '</pre>';
+    */
     // include the required files and libraries
     require_once __DIR__ . '/model/journal-model.php';
     require_once __DIR__ . '/library/functions.php';
     require_once __DIR__ . '/library/journal-db-connect.php';
+
+    // Set the default timezone
+    date_default_timezone_set('Africa/Johannesburg');
 
     // Define how many entries to display per page
     $entriesPerPage = 3;
@@ -56,8 +63,17 @@
                 </div>
                 <!-- Section 2: Entry card heading and content -->
                 <section class="entry-card__content">
-                    <!-- Time stamp -->
-                    <div class="entry-card__time"><?php echo e($journalEntry['created_on']) ?></div>
+                    <!-- Timestamp -->
+                    <?php 
+                        // Explode the created_on date string from the database into an array
+                        $dateComponents = explode('-', $journalEntry['created_on']);
+                        // Turn the components into variables using destructuring
+                        [$year, $month, $day] = $dateComponents;
+                        // Turn the date components into a timestamp
+                        $timestamp = mktime (0, 0, 0, (INT) $month, (INT) $day, (INT) $year);
+                    ?>
+                    <!-- Convert the generated timestamp into a human-readable date -->
+                    <div class="entry-card__time"><?php echo e(date('Y/m/d', $timestamp)) ?></div>
                     <!-- Entry Title -->
                     <h2 class="entry-card__title"><?php echo e($journalEntry['title']) ?></h2>
                     <!-- Entry paragraph(s) -->

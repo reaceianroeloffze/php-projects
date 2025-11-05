@@ -18,8 +18,11 @@ CREATE TABLE IF NOT EXISTS `entries`
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB # Default storage engine
   DEFAULT CHARSET = utf8mb4 # recommended character set
-  COLLATE = utf8mb4_0900_ai_ci
+  COLLATE = utf8mb4_0900_ai_ci;
 # recommended collation;
 
 # Create a table index
 # CREATE INDEX `journal_entry_date` ON `entries` (`created_on`);
+
+# Add image column to entries table
+ALTER TABLE `entries` ADD COLUMN `image` VARCHAR(1100) DEFAULT NULL AFTER `body`;

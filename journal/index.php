@@ -55,12 +55,15 @@
             <div class="entry-card">
                 <!-- Divide the entry card into 2 sections -->
                 <!-- Section 1: Image container and image -->
-                <div class="entry-card__image-container">
-                    <img src="images/elePHPant.jpg"
-                         alt="ElePHPant by Ben Griffiths on Unsplash"
-                         class="entry-card__image"
-                    >
-                </div>
+                <!-- If an image is uploaded, display it. -->
+                <?php if (!empty($journalEntry['image'])): ?>
+                    <div class="entry-card__image-container">
+                        <img src="images/elePHPant.jpg"
+                            alt="ElePHPant by Ben Griffiths on Unsplash"
+                            class="entry-card__image"
+                        >
+                    </div>
+                <?php endif; ?>
                 <!-- Section 2: Entry card heading and content -->
                 <section class="entry-card__content">
                     <!-- Timestamp -->

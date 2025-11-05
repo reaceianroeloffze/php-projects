@@ -38,9 +38,11 @@
 
     /* Style the entry card */
     .entry-card {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        justify-content: space-between;
+        /* grid-template-columns: auto; */
+        /* grid-template-rows: auto; */
+        flex-direction: row;
+        flex: 0 0 auto;
+        /* justify-content: space-between; */
     }
 
     /* Style the entry card content */
@@ -57,10 +59,6 @@
     /* Style the entry card image */
     .entry-card__image {
         box-shadow: 0.25rem 0 1rem rgba(0, 0, 0, 0.3);
-    }
-
-    /* Style the entry card paragraph */
-    .entry-card__paragraph {
     }
 
     /* Style the pagination list */

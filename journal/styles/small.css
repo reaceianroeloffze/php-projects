@@ -152,8 +152,8 @@ a {
 
 /* Style the entry card */
 .entry-card {
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: column;
     background-color: #edebe9;
     border-radius: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
@@ -287,6 +287,11 @@ a {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+}
+
+.file-upload {
+    border: none;
+    padding: 0;
 }
 
 /* Style the textarea */

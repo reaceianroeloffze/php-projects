@@ -26,6 +26,9 @@
 
     // Retrieve the journal entries from the database/model file
     $journalEntries = displayJournalEntries($entriesPerPage, $offset);
+    echo '<pre>';
+    print_r($journalEntries);
+    echo '</pre>';
 
     // Get the total number of journal entries for pagination
     $entryCount = countAllJournalEntries();
@@ -58,7 +61,7 @@
                 <!-- If an image is uploaded, display it. -->
                 <?php if (!empty($journalEntry['image'])): ?>
                     <div class="entry-card__image-container">
-                        <img src="images/elePHPant.jpg"
+                        <img src="image_uploads/<?php echo $journalEntry['image'] ?>"
                             alt="ElePHPant by Ben Griffiths on Unsplash"
                             class="entry-card__image"
                         >

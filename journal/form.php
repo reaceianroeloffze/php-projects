@@ -22,19 +22,19 @@
     if ($action === NULL) {
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
-    
+
     if ($action === 'submit-entry') {
         // Filter and store the form input data
         // Entry title
-        $title = (string) (trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
+        $title = (trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
         // The date the entry was created
-        $created_on = (string) (trim(filter_input(INPUT_POST, 'created_on',  FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
+        $created_on = (trim(filter_input(INPUT_POST, 'created_on', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
         // The text content of the entry
-        $body = (string) (trim(filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
-        
+        $body = (trim(filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS)) ?? '');
+
         /* Scale the uploaded image */
-        $timestampedImage = null;
-        
+        $timestampedImage = NULL; // Default value if no image is uploaded
+
         /*
         Check if an image was uploaded successfully
 
@@ -48,125 +48,114 @@
             is_uploaded_file($_FILES['image']['tmp_name']) &&
             $_FILES['image']['error'] === UPLOAD_ERR_OK &&
             $_FILES['image']['size'] > 0
-           ) {
+        ) {
+
             // Get the uploaded image file name
             $submittedImage = (string) $_FILES['image']['name'];
 
-            // Get the temparary image file path/name
-            $submittedImageTempName = $_FILES['image']['tmp_name'];
+            // Get the temporary image file path/name
+            $submittedImageTempName = (string) $_FILES['image']['tmp_name'];
 
-            // Get type of the uploaded image
-            $imageType = exif_imagetype($submittedImageTempName);
+            // Get the info of the uploaded image
+            $uploadedImageInfo = @getimagesize($submittedImageTempName);
 
-            // Check if what was uploaded is actually an image
-            if ($imageType === false) {
-                $_SESSION['message'] = <<<'ERROR'
-                <p class="error-message">
-                    You have uploaded an incorrect file type. Please upload images only.
-                </p>
-                ERROR;
-            }
-
-            // Define allowed image upload types
-            $allowedImageTypes = [
-                IMAGETYPE_GIF,
-                IMAGETYPE_JPEG,
-                IMAGETYPE_PNG,
-            ];
-
-            // Reject all undesired image uploads
-            if (!in_array($imageType, $allowedImageTypes)) {
-                $_SESSION['message'] = <<<'ERROR_MSG'
-                <p>
-                    Please upload a jpg/jpeg, png, or gif image. No other image types supported.
-                </p>
-                ERROR_MSG;
-            }
-
-            // Remove the file extension from the image file name
-            $imageNameWithoutExtension = getImageNameWithoutExtension($submittedImage);
-
-            // Remove unwanted characters from the image file name
-            $sanitisedImageName = preg_replace("/[^a-zA-Z0-9_-]/", "", $imageNameWithoutExtension);
-
-            // Append the current timestamp and file extention to the sanitised image name
-            $timestampedImage = match (true) {
-                $imageType === IMAGETYPE_JPEG => appendTimestampAndJpgToImage($sanitisedImageName),
-                $imageType === IMAGETYPE_PNG => appendTimestampAndPngToImage($sanitisedImageName),
-                $imageType === IMAGETYPE_GIF => appendTimestampAndGifToImage($sanitisedImageName),
-            };
-            
-            // Set the destination folder for the timestamped image
-            $timeStampedImgDestination = __DIR__ . '/image_uploads/'  . $timestampedImage;
-
-            // Get the width and height of the original submitted image
-            [$originalImageWidth, $originalImageHeight] = getImageSize($submittedImageTempName);
-
-            // Set the desired max dimensions of the image to scale
-            $maxImageDimensions = (float) 500;
-
-            // Scale the image
-            ['scaled_width' => $scaledWidth, 'scaled_height' => $scaledHeight] = scaleDownImage($maxImageDimensions, $originalImageWidth, $originalImageHeight);
-
-            /* 
-            Initiate a variable to store a newly created image.
-            If the image is a jpg, png, or gif, create a new image from that format.
-            */
-            $newImageFormat = match (true) {
-                $imageType === IMAGETYPE_JPEG => imagecreatefromjpeg($submittedImageTempName),
-                $imageType === IMAGETYPE_PNG  => imagecreatefrompng($submittedImageTempName),
-                $imageType === IMAGETYPE_GIF  => imagecreatefromgif($submittedImageTempName),
-                default => $_SESSION['message'] = <<<'ERROR_MSG'
-                <p class="error-message">
-                    Only jpg/jpeg, png, and gif image uploads are supported.
-                </p>
-                ERROR_MSG,
-            };
-            
-            // Create a new image
-            $image = imagecreatetruecolor( $scaledWidth,  $scaledHeight);
-
-            // Copy and resample the new image
-            $imageResampled = imagecopyresampled($image, $newImageFormat, 0, 0, 0, 0, $scaledWidth, $scaledHeight, $originalImageWidth, $originalImageHeight);
-
-            // Output the image to the image_uploads file
-            match (true) {
-                $imageType === IMAGETYPE_JPEG => imagejpeg($image, $timeStampedImgDestination),
-                $imageType === IMAGETYPE_PNG => imagepng($image, $timeStampedImgDestination),
-                $imageType === IMAGETYPE_GIF => imagegif($image, $timeStampedImgDestination),
-            };
-        }
-  
-        // Check if the form was submitted
-        if (!empty($title) && !empty($created_on) && !empty($body)) {
-            // Insert the new journal entry into the database
-            $newEntry = insertNewJournalEntry($title, $created_on, $body, $timestampedImage);
-            // Check if the insertion was successful
-            if ($newEntry) {
-                // Display a success message
-                $_SESSION['message'] = <<<'SUCCESS_MSG'
-                <p class="success-message">
-                    Your journal entry was added successfully!
-                </p>;
-                SUCCESS_MSG;
+            // Ensure the uploaded image is an image
+            if ($uploadedImageInfo === FALSE) {
+                $_SESSION['message'] =
+                    <<<'ERROR_MSG'
+                    <p class="error-message">
+                        Please upload an image file (jpg, png, GIF)
+                    </p>
+                    ERROR_MSG;
             } else {
-                // Display an error message
-                $_SESSION['message'] = <<<'ERROR_MSG'
-                <p class="error-message">
-                    Sorry, there was an error adding your journal entry. Please try again.
-                </p>
-                ERROR_MSG;
+
+                // Get and store the image type
+                $imageType = $uploadedImageInfo[2];
+
+                // Specify which images are allowed to be uploaded
+                $allowedImageTypes = [
+                    IMAGETYPE_JPEG,
+                    IMAGETYPE_PNG,
+                    IMAGETYPE_GIF
+                ];
+
+                // Ensure the uploaded image is an allowed image type
+                if (!in_array($imageType, $allowedImageTypes)) {
+                    $_SESSION['message'] =
+                        <<<'ERROR_MSG'
+                    <p class="error-message">
+                        Please upload either a jpg, png, or a GIF image.
+                    </p>
+                    ERROR_MSG;
+                }
+
+                // Sanitise the uploaded image filename
+                $uploadedImageName = preg_replace('/[^a-zA-Z0-9\-.]/', '', pathinfo($submittedImage, PATHINFO_FILENAME));
+
+                // Append the current timestamp and the image extension to the uploaded image name
+                $timestampedImage = match ($imageType) {
+                    IMAGETYPE_JPEG => appendTimestampAndJpgToImage($uploadedImageName),
+                    IMAGETYPE_PNG => appendTimestampAndPngToImage($uploadedImageName),
+                    IMAGETYPE_GIF => appendTimestampAndGifToImage($uploadedImageName),
+                };
+
+                // Set the destination folder for the uploaded image
+                $uploadedImageDestinationFolder = __DIR__ . '/image_uploads/' . $timestampedImage;
+
+                // Set the dimensions of the uploaded image
+                $imageDimensions = 500;
+
+                // Resize and save the uploaded image
+                [$originalImageWidth, $originalImageHeight] = $uploadedImageInfo;
+                ['scaled_width' => $width, 'scaled_height' => $height,] = scaleDownImage($imageDimensions, $originalImageWidth, $originalImageHeight);
+
+                // create a new image resource from the uploaded image
+                $resizedUploadedImage = match ($imageType) {
+                    IMAGETYPE_JPEG => imagecreatefromjpeg($submittedImageTempName),
+                    IMAGETYPE_PNG => imagecreatefrompng($submittedImageTempName),
+                    IMAGETYPE_GIF => imagecreatefromgif($submittedImageTempName),
+                };
+
+                // Create the resized image
+                $finalUploadedImage = imagecreatetruecolor($width, $height);
+
+                // Resample the uploaded image onto the final image
+                imagecopyresized($finalUploadedImage, $resizedUploadedImage, 0, 0, 0, 0, $width, $height, $originalImageWidth, $originalImageHeight);
+
+                // Save the resized image to the destination folder
+                match ($imageType) {
+                    IMAGETYPE_JPEG => imagejpeg($finalUploadedImage, $uploadedImageDestinationFolder),
+                    IMAGETYPE_PNG => imagepng($finalUploadedImage, $uploadedImageDestinationFolder),
+                    IMAGETYPE_GIF => imagegif($finalUploadedImage, $uploadedImageDestinationFolder),
+                };
+
+                // Destroy the uploaded image resource
+                imagedestroy($resizedUploadedImage);
+                imagedestroy($finalUploadedImage);
             }
-            header('Location: index.php');
-            exit;
-        } else {
-            // Display an error message if the form fields are empty
-            $_SESSION['message'] = <<<'ERROR_MSG'
-            <p class="error-message">
-                Please fill in all fields before submitting your journal entry.
-            </p>
-            ERROR_MSG;
+
+            // Make sure that all required form fields are filled out
+            if (empty($title) || empty($body) || empty($created_on)) {
+                $_SESSION['message'] =
+                    <<<'ERROR_MSG'
+                    <p class="error-message">
+                        Please fill in all required fields.
+                    </p>
+                    ERROR_MSG;
+            }
         }
+
+        // Add the new journal entry to the database
+        $newJournalEntry = insertNewJournalEntry($title, $created_on, $body, $timestampedImage);
+
+        // Set a success message if the entry was successfully added to the database
+        $_SESSION['message'] = $newJournalEntry
+            ? '<p class="success-message">Journal entry added successfully!</p>'
+            : '<p class="error-message">There was an error adding your journal entry. Please try again.</p>';
+
+        // Redirect the user back to the homepage
+        header('Location: index.php');
+        exit;
     }
 
 ?>
@@ -194,6 +183,7 @@
                        class="site-form__input"
                        name="title"
                        title="Title of your new journal entry"
+                    <?php if (isset($title)) echo "value='$title'"; ?>
                 >
             </label>
             <!-- Entry date -->
@@ -202,6 +192,7 @@
                        class="site-form__input"
                        name="created_on"
                        title="Date of your new journal entry"
+                    <?php if (isset($created_on)) echo "value='$created_on'"; ?>
                 >
             </label>
             <!-- File upload -->
@@ -218,7 +209,7 @@
                           rows="10"
                           class="site-form__textarea"
                           title="Share whatever you like"
-                ></textarea>
+                ><?php if (isset($body)) echo $body; ?></textarea>
             </label>
             <!-- Form submit button -->
             <button class="site-form__submit-btn site-btn"

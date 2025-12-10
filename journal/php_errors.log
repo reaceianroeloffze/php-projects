@@ -237,3 +237,451 @@ Stack trace:
 [31-Oct-2025 15:29:18 Africa/Johannesburg] PHP Warning:  Undefined variable $page in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 79
 [31-Oct-2025 15:29:58 Africa/Johannesburg] PHP Warning:  Undefined variable $page in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 79
 [31-Oct-2025 15:30:02 Africa/Johannesburg] PHP Warning:  Undefined variable $page in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 79
+[04-Nov-2025 07:00:36 Africa/Johannesburg] PHP Warning:  Undefined array key "message" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\index.php on line 5
+[05-Nov-2025 12:35:22 Africa/Johannesburg] PHP Parse error:  Unclosed '{' on line 21 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 152
+[05-Nov-2025 12:35:26 Africa/Johannesburg] PHP Parse error:  Unclosed '{' on line 21 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 152
+[05-Nov-2025 17:06:10 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:06:10 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpA576.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:06:10 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:06:10 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:06:10 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(86): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 86
+[05-Nov-2025 17:10:01 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:10:01 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php2D74.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:10:01 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:10:01 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:10:01 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:10:29 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:10:29 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php9826.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:10:29 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:10:29 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:10:29 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(86): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 86
+[05-Nov-2025 17:14:38 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:14:38 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php66D3.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:14:38 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:14:38 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:14:38 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:15:10 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:15:10 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpE347.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:15:10 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:15:10 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:15:10 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:16:23 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:16:23 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpFE9B.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:16:23 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:16:23 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:16:23 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:18:00 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:18:00 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php7A30.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:18:00 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:18:00 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:18:00 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:18:12 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:18:12 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpAB82.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:18:12 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:18:12 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:18:12 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:19:01 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:19:01 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php684B.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:19:01 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:19:01 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:19:01 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:19:58 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:19:58 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php4771.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:19:58 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:19:58 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:19:58 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(86): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 86
+[05-Nov-2025 17:20:11 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:20:11 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php7C0F.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 80
+[05-Nov-2025 17:20:11 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:20:11 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 83
+[05-Nov-2025 17:20:11 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(86): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 86
+[05-Nov-2025 17:21:59 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:21:59 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php2173.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:21:59 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:21:59 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:21:59 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:22:02 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:22:02 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php2CCE.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:22:02 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:22:02 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:22:02 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:23:58 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:23:58 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpF069.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:23:58 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:23:58 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:23:58 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 17:43:37 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:43:37 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpF072.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 17:43:37 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:43:37 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 17:43:37 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[05-Nov-2025 18:02:13 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 18:02:13 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\phpF6BA.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 81
+[05-Nov-2025 18:02:13 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 18:02:13 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 84
+[05-Nov-2025 18:02:13 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(87): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500.0, 281.25, 1920, 1080)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[06-Nov-2025 10:19:48 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 93
+[06-Nov-2025 10:19:48 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 93
+[06-Nov-2025 10:19:48 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 96
+[06-Nov-2025 10:19:48 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 96
+[06-Nov-2025 10:19:49 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(103): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 10:24:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:24:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:24:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:24:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:24:17 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 102 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(102): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 10:24:25 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:24:25 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:24:25 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:24:25 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:24:25 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 102 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(102): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 10:26:42 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:26:42 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:26:42 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:26:42 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:26:42 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 102 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(102): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 10:27:09 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:27:09 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 92
+[06-Nov-2025 10:27:09 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:27:09 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 95
+[06-Nov-2025 10:27:09 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 102 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(102): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:28:12 Africa/Johannesburg] PHP Warning:  exif_imagetype(Screenshot (116).png): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 56
+[06-Nov-2025 11:28:12 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103
+[06-Nov-2025 11:28:12 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103
+[06-Nov-2025 11:28:12 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 106
+[06-Nov-2025 11:28:12 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 106
+[06-Nov-2025 11:28:12 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 113 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(113): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:29:01 Africa/Johannesburg] PHP Warning:  exif_imagetype(Screenshot (116).png): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 72
+[06-Nov-2025 11:29:01 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103
+[06-Nov-2025 11:29:01 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103
+[06-Nov-2025 11:29:02 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 106
+[06-Nov-2025 11:29:02 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 106
+[06-Nov-2025 11:29:02 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 113 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(113): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:29:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103
+[06-Nov-2025 11:29:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 103
+[06-Nov-2025 11:29:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 500.00000000000006 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 106
+[06-Nov-2025 11:29:17 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 281.25 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 106
+[06-Nov-2025 11:29:18 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 113 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(113): insertNewJournalEntry('Test', '2025-11-05', 'Text', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:48:57 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 375.5 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 113
+[06-Nov-2025 11:48:57 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 375.5 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 116
+[06-Nov-2025 11:48:57 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 123 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(123): insertNewJournalEntry('test', '2025-11-06', 'I love miniguns...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:52:29 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 375.5 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 112
+[06-Nov-2025 11:52:29 Africa/Johannesburg] PHP Deprecated:  Implicit conversion from float 375.5 to int loses precision in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 115
+[06-Nov-2025 11:52:29 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 122 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(122): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:56:08 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 122 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(122): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 11:57:02 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 122 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(122): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:12:27 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 129 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(129): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:14:22 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 131 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(131): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:14:32 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 131 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(131): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:15:56 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 132 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(132): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:36:26 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(143): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:36:48 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(143): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:37:12 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(143): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:46:04 Africa/Johannesburg] PHP Fatal error:  Uncaught UnhandledMatchError: Unhandled match case 3 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:88
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 88
+[06-Nov-2025 12:47:24 Africa/Johannesburg] PHP Warning:  imagecreatefromgif(): &quot;C:\Windows\Temp\php178E.tmp&quot; is not a valid GIF file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 117
+[06-Nov-2025 12:47:24 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:139
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(139): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500, 376, 1000, 751)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 139
+[06-Nov-2025 12:49:09 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 149 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(149): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:52:02 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 149 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(149): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:52:22 Africa/Johannesburg] PHP Fatal error:  Uncaught UnhandledMatchError: Unhandled match case 3 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:88
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 88
+[06-Nov-2025 12:52:46 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 149 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(149): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 12:53:13 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 149 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(149): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 13:00:59 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Not a JPEG file: starts with 0x89 0x50 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 111
+[06-Nov-2025 13:00:59 Africa/Johannesburg] PHP Warning:  imagecreatefromjpeg(): &quot;C:\Windows\Temp\php8816.tmp&quot; is not a valid JPEG file in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 111
+[06-Nov-2025 13:00:59 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:135
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(135): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500, 376, 1000, 751)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 135
+[06-Nov-2025 13:02:29 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, GdImage given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(142): insertNewJournalEntry('title', '2025-11-06', '...', Object(GdImage))
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 13:34:42 Africa/Johannesburg] PHP Warning:  Undefined variable $timeStampedImgDestination in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 158
+[06-Nov-2025 13:49:39 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected token "}" in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 138
+[06-Nov-2025 13:59:35 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: insertNewJournalEntry(): Argument #4 ($image) must be of type string, null given, called in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144 and defined in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:83
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(144): insertNewJournalEntry('no image', '2025-11-06', '---///---', NULL)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 83
+[06-Nov-2025 15:36:10 Africa/Johannesburg] PHP Fatal error:  Uncaught UnhandledMatchError: Unhandled match case true in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[06-Nov-2025 15:36:54 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, null given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:127
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(127): imagecopyresampled(Object(GdImage), NULL, 0, 0, 0, 0, 500, 480, 640, 614)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 127
+[06-Nov-2025 15:38:45 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, null given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:127
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(127): imagecopyresampled(Object(GdImage), NULL, 0, 0, 0, 0, 500, 480, 640, 614)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 127
+[06-Nov-2025 15:39:41 Africa/Johannesburg] PHP Fatal error:  Uncaught UnhandledMatchError: Unhandled match case true in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:87
+Stack trace:
+#0 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 87
+[06-Nov-2025 15:41:09 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, null given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:127
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(127): imagecopyresampled(Object(GdImage), NULL, 0, 0, 0, 0, 500, 480, 640, 614)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 127
+[06-Nov-2025 15:41:29 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, int given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:127
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(127): imagecopyresampled(Object(GdImage), 0, 0, 0, 0, 0, 500, 480, 640, 614)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 127
+[06-Nov-2025 15:41:41 Africa/Johannesburg] PHP Fatal error:  Uncaught TypeError: imagecopyresampled(): Argument #2 ($src_image) must be of type GdImage, false given in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php:127
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(127): imagecopyresampled(Object(GdImage), false, 0, 0, 0, 0, 500, 480, 640, 614)
+#1 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 127
+[06-Nov-2025 16:26:45 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:26:45 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:26:45 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:31:21 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:31:21 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:31:21 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:34:22 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:34:22 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:34:22 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:49:24 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:49:24 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:49:24 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:50:38 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:50:38 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:50:38 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:50:51 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:50:51 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:50:51 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:51:32 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:51:32 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:51:32 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:51:46 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:51:46 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:51:46 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:53:28 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:53:28 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:53:28 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:55:25 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:55:25 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:55:25 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:56:11 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:56:11 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:56:11 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:56:27 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:56:27 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:56:27 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:57:28 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:57:28 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:57:28 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:57:37 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:57:37 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:57:37 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[06-Nov-2025 16:58:59 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 142
+[06-Nov-2025 16:58:59 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 143
+[06-Nov-2025 16:58:59 Africa/Johannesburg] PHP Deprecated:  str_contains(): Passing null to parameter #1 ($haystack) of type string is deprecated in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 144
+[10-Dec-2025 18:03:25 Africa/Johannesburg] PHP Warning:  imagepng(C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal/uploads/minigun-1765382604.png): Failed to open stream: No such file or directory in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php on line 129
+[10-Dec-2025 18:04:30 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:99
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(99): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(150): insertNewJournalEntry('', '', '', NULL)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 99
+[10-Dec-2025 18:36:16 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(86): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(150): insertNewJournalEntry('', '', '', NULL)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 86
+[10-Dec-2025 18:38:15 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(86): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(150): insertNewJournalEntry('', '', '', NULL)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 86
+[10-Dec-2025 18:40:20 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(86): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(150): insertNewJournalEntry('', '', '', NULL)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 86
+[10-Dec-2025 18:41:34 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(86): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(151): insertNewJournalEntry('', '', '', NULL)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 86
+[10-Dec-2025 18:41:40 Africa/Johannesburg] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column `journal`.`entries`.`created_on` at row 1 in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php:86
+Stack trace:
+#0 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php(86): PDOStatement->execute()
+#1 C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\form.php(151): insertNewJournalEntry('', '', '', NULL)
+#2 {main}
+  thrown in C:\Users\temp\OneDrive\Desktop\Reace\Coding\Projects\repos\php\journal\model\journal-model.php on line 86

@@ -46,6 +46,8 @@ ij_any_align_multiline_for = true
 ij_any_align_multiline_parameters = true
 ij_any_align_multiline_parameters_in_calls = true
 ij_any_align_multiline_ternary_operation = true
+# type casting
+ij_any_space_after_type_cast = true
 
 [*.html]
 ij_html_align_attributes = true
@@ -62,12 +64,12 @@ ij_php_indent_code_in_php_tags = true
 ij_php_spaces_within_short_echo_tags = true
 ij_php_phpdoc_blank_line_before_tags = true
 # alignment
-ij_php_align_assignments = true
 # PHP constants
 ij_php_upper_case_null_const = true
 ij_php_upper_case_boolean_const = true
 # else if
 ij_php_else_if_style = separate
+ij_php_heredoc_on_same_line = false
 
 
 
